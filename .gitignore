@@ -103,6 +103,7 @@ dist
 # TernJS port file
 .tern-port
 # SASS files and directories
-/sass
+/online-zoo/pages/donate/scss/
+/online-zoo/pages/main/scss/
 .scss
 .sass-cache
