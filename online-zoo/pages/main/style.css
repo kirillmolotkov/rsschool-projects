@@ -159,27 +159,27 @@ table {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url(./../../../assets/fonts/Roboto-Bold.ttf); }
+  src: url(../../assets/fonts/Roboto-Bold.ttf); }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url(./../../../assets/fonts/Roboto-Medium.ttf); }
+  src: url(../../assets/fonts/Roboto-Medium.ttf); }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url(./../../../assets/fonts/Roboto-Regular.ttf); }
+  src: url(../../assets/fonts/Roboto-Regular.ttf); }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  src: url(./../../../assets/fonts/Roboto-Light.ttf); }
+  src: url(../../assets/fonts/Roboto-Light.ttf); }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 100;
-  src: url(./../../../assets/fonts/Roboto-Thin.ttf); }
+  src: url(../../assets/fonts/Roboto-Thin.ttf); }
 .container-header {
   height: 80px;
   background-color: #000000; }
@@ -211,7 +211,7 @@ table {
   position: relative;
   width: 13px;
   height: 22px;
-  background: url(./../../../assets/svg/bamboo.svg);
+  background: url(../../assets/svg/bamboo.svg);
   top: -25px;
   left: 11px; }
 
@@ -245,7 +245,7 @@ table {
 
 .watch-online-container {
   height: 700px;
-  background-image: url(./../../../assets/images/watch-online-background.jpg);
+  background-image: url(../../assets/images/watch-online-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 -80px; }
@@ -311,7 +311,7 @@ table {
   width: 609px;
   height: 403px;
   margin-top: 140px;
-  background-image: url(,/../../../../assets/images/the-backstage-image.jpg); }
+  background-image: url(../../assets/images/the-backstage-image.jpg); }
 
 .the-backstage-text {
   width: 465px;
@@ -349,7 +349,7 @@ table {
   margin-top: 34px; }
 
 .the-backstage-container {
-  background-image: url(./../../../assets/images/flower-the-backstage-image.jpg);
+  background-image: url(../../assets/images/flower-the-backstage-image.jpg);
   background-repeat: no-repeat;
   background-position: 100% 50%; }
 
@@ -410,27 +410,27 @@ table {
   cursor: pointer; }
 
 .pets-card-item-1-img {
-  background-image: url(./../../../assets/images/pets-img-item-1.jpg);
+  background-image: url(../../assets/images/pets-img-item-1.jpg);
   transition: 0.5s; }
 
 .pets-card-item-2-img {
-  background-image: url(./../../../assets/images/pets-img-item-2.jpg);
+  background-image: url(../../assets/images/pets-img-item-2.jpg);
   transition: 0.5s; }
 
 .pets-card-item-3-img {
-  background-image: url(./../../../assets/images/pets-img-item-3.jpg);
+  background-image: url(../../assets/images/pets-img-item-3.jpg);
   transition: 0.5s; }
 
 .pets-card-item-4-img {
-  background-image: url(./../../../assets/images/pets-img-item-4.jpg);
+  background-image: url(../../assets/images/pets-img-item-4.jpg);
   transition: 0.5s; }
 
 .pets-card-item-5-img {
-  background-image: url(./../../../assets/images/pets-img-item-5.jpg);
+  background-image: url(../../assets/images/pets-img-item-5.jpg);
   transition: 0.5s; }
 
 .pets-card-item-6-img {
-  background-image: url(./../../../assets/images/pets-img-item-6.jpg);
+  background-image: url(../../assets/images/pets-img-item-6.jpg);
   transition: 0.5s; }
 
 .pets-card-block {
@@ -467,7 +467,7 @@ table {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(./../../../assets/svg/bamboo-green.svg);
+  background-image: url(../../assets/svg/bamboo-green.svg);
   background-repeat: no-repeat;
   top: 1px;
   left: 10px; }
@@ -476,7 +476,7 @@ table {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(./../../../assets/svg/banana.svg);
+  background-image: url(../../assets/svg/banana.svg);
   background-repeat: no-repeat;
   top: -27px;
   left: 1px; }
@@ -485,7 +485,7 @@ table {
   position: relative;
   width: 30px;
   height: 30px;
-  background-image: url(./../../../assets/svg/steak_icon.svg);
+  background-image: url(../../assets/svg/steak_icon.svg);
   background-repeat: no-repeat;
   top: 1px;
   left: 10px; }
@@ -494,7 +494,7 @@ table {
   position: relative;
   width: 35px;
   height: 30px;
-  background-image: url(./../../../assets/svg/fish_icon.svg);
+  background-image: url(../../assets/svg/fish_icon.svg);
   background-repeat: no-repeat;
   top: -27px;
   left: 1px; }
@@ -517,7 +517,7 @@ table {
   cursor: pointer; }
 
 .pets-container {
-  background: url(./../../../assets/images/palm_foto.jpg) no-repeat 0% 100%, url(./../../../assets/images/strelitzia.jpg) no-repeat 100% 100%; }
+  background: url(../../assets/images/palm_foto.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia.jpg) no-repeat 100% 100%; }
 
 .pets-card-item-1:hover,
 .pets-card-item-2:hover,
@@ -684,21 +684,21 @@ table {
 .how-it-work-arrow {
   width: 69px;
   height: 36px;
-  background-image: url(./../../../assets/svg/how-it-work-arrow.svg);
+  background-image: url(../../assets/svg/how-it-work-arrow.svg);
   background-size: cover; }
 
 .how-it-work-img-1 {
-  background-image: url(./../../../assets/svg/pay.svg);
+  background-image: url(../../assets/svg/pay.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .how-it-work-img-2 {
-  background-image: url(./../../../assets/svg/zoo.svg);
+  background-image: url(../../assets/svg/zoo.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .how-it-work-img-3 {
-  background-image: url(./../../../assets/svg/monkey.svg);
+  background-image: url(../../assets/svg/monkey.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
@@ -729,7 +729,7 @@ table {
   cursor: pointer; }
 
 .testimonials-container {
-  background-image: url(./../../../assets/images/leav_foto.jpg);
+  background-image: url(../../assets/images/leav_foto.jpg);
   background-repeat: no-repeat;
   background-position: 100% 125%; }
 
@@ -797,16 +797,16 @@ table {
   border-radius: 50%; }
 
 .testimonials-item-logo-1 {
-  background-image: url(./../../../assets/svg/testimonails-logo.svg); }
+  background-image: url(../../assets/svg/testimonails-logo.svg); }
 
 .testimonials-item-logo-2 {
-  background-image: url(./../../../assets/images/logo-oskar.jpg); }
+  background-image: url(../../assets/images/logo-oskar.jpg); }
 
 .testimonials-item-logo-3 {
-  background-image: url(./../../../assets/images/logo-frederica.jpg); }
+  background-image: url(../../assets/images/logo-frederica.jpg); }
 
 .testimonials-item-logo-4 {
-  background-image: url(./../../../assets/images/logo-mila.jpg); }
+  background-image: url(../../assets/images/logo-mila.jpg); }
 
 .testimonials-progress-bar {
   box-sizing: border-box;
