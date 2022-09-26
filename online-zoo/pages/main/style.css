@@ -895,22 +895,22 @@ table {
   background-color: rgba(196, 196, 196, 0.5); }
 
 .logo-facebook {
-  background-image: url(../../../../assets/svg/logo-facebook.svg);
+  background-image: url(../../assets/svg/logo-facebook.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .logo-twitter {
-  background-image: url(../../../../assets/svg/logo-twitter.svg);
+  background-image: url(../../assets/svg/logo-twitter.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .logo-instagram {
-  background-image: url(../../../../assets/svg/logo-instagram.svg);
+  background-image: url(../../assets/svg/logo-instagram.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
 .logo-youtube {
-  background-image: url(../../../../assets/svg/logo-youtube.svg);
+  background-image: url(../../assets/svg/logo-youtube.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%; }
 
