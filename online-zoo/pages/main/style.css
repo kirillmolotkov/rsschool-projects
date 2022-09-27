@@ -114,6 +114,9 @@ table {
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 .container {
   width: 100%; }
 
@@ -197,6 +200,9 @@ table {
   border-radius: 2px;
   cursor: pointer; }
 
+.logo-petstory a {
+  text-decoration: none; }
+
 .logo-petstory-title {
   margin-top: 3.5px;
   text-align: center;
@@ -229,10 +235,23 @@ table {
   font-size: 16px;
   line-height: 140%;
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.2s; }
+
+.header nav ul li a:hover {
+  color: #e47209; }
+
+.header nav ul li a:active {
+  color: #4b9200; }
 
 .designed-by {
   margin-left: 438px; }
+
+.designed-by p a:hover {
+  color: #e47209; }
+
+.designed-by p a:active {
+  color: #4b9200; }
 
 .designed-by p a {
   font-family: "Roboto";
@@ -241,7 +260,11 @@ table {
   font-size: 16px;
   line-height: 140%;
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.2s; }
+
+#active {
+  color: #e47209; }
 
 .watch-online-container {
   height: 700px;
@@ -290,7 +313,14 @@ table {
   text-align: center;
   color: #ffffff;
   background-image: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.5s; }
+
+.watch-online-button:hover {
+  background: #e47209; }
+
+.watch-online-button:active {
+  background: #4b9200; }
 
 .watch-online-circle {
   position: relative;
@@ -379,6 +409,24 @@ table {
   border-radius: 50%;
   background-image: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   cursor: pointer; }
+
+.pets-card-button-left img {
+  position: relative;
+  top: 21px;
+  left: 21px; }
+
+.pets-card-button-right img {
+  position: relative;
+  top: 21px;
+  left: 21px; }
+
+.pets-card-button-left:hover,
+.pets-card-button-right:hover {
+  background: #e47209; }
+
+.pets-card-button-left:active,
+.pets-card-button-right:active {
+  background: #4b9200; }
 
 .pets-card-item-1,
 .pets-card-item-2,
@@ -503,7 +551,7 @@ table {
   margin-top: 80px;
   width: 298px;
   height: 54px;
-  background-color: #fe9013;
+  background-image: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   border: none;
   border-radius: 25px;
   font-family: "Roboto";
@@ -511,10 +559,14 @@ table {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  text-align: center;
-  text-decoration: uppercase;
   color: #ffffff;
   cursor: pointer; }
+
+.pets-button:hover {
+  background: #e47209; }
+
+.pets-button:active {
+  background: #4b9200; }
 
 .pets-container {
   background: url(../../assets/images/palm_foto.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia.jpg) no-repeat 100% 100%; }
@@ -652,6 +704,9 @@ table {
   border-bottom: 1px solid #fe9013;
   color: #333b41; }
 
+.pick-friends p a:hover {
+  color: #4b9200; }
+
 .pick-friends h3 {
   margin-top: 60px;
   margin-bottom: 40px;
@@ -727,6 +782,15 @@ table {
   text-align: center;
   color: #ffffff;
   cursor: pointer; }
+
+.how-it-work-button:hover {
+  background: #e47209; }
+
+.how-it-work-button:active {
+  background: #4b9200; }
+
+a {
+  text-decoration: none; }
 
 .testimonials-container {
   background-image: url(../../assets/images/leav_foto.jpg);
@@ -808,20 +872,28 @@ table {
 .testimonials-item-logo-4 {
   background-image: url(../../assets/images/logo-mila.jpg); }
 
-.testimonials-progress-bar {
-  box-sizing: border-box;
+input[type="range"] {
+  display: block;
   margin: 0 auto;
   width: 599px;
-  height: 8px;
-  border: 1px solid rebeccapurple;
-  border-radius: 4px; }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
-.testimonials-progress-bar-item {
-  width: 200px;
-  height: 6px;
-  border: 1px solid #fe9013;
-  border-radius: 3px;
-  background-color: #fe9013; }
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 10px/100%;
+  height: 7px;
+  border: 1px solid rebeccapurple;
+  background-color: #ffffff; }
+
+input[type="range"]::-webkit-slider-thumb {
+  background: #fe9013;
+  border-radius: 10px/100%;
+  cursor: pointer;
+  width: 115px;
+  height: 7px;
+  -webkit-appearance: none;
+  margin-top: -1px; }
 
 .testimonials-button {
   margin-top: 31px;
@@ -836,7 +908,14 @@ table {
   line-height: 140%;
   text-align: center;
   color: #ffffff;
-  background-image: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%); }
+  background-image: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  cursor: pointer; }
+
+.testimonials-button:hover {
+  background: #e47209; }
+
+.testimonials-button:active {
+  background: #4b9200; }
 
 .footer-container {
   background-color: #111115; }
@@ -863,6 +942,12 @@ table {
   color: #ffffff;
   cursor: pointer; }
 
+.footer-button-donate:hover {
+  background: #e47209; }
+
+.footer-button-donate:active {
+  background: #4b9200; }
+
 .social-list {
   margin-top: 44px; }
 
@@ -888,31 +973,23 @@ table {
   color: #ffffff;
   text-decoration: none; }
 
+.social-list ul li a:hover {
+  color: #4b9200; }
+  .social-list ul li a:hover .logo-footer-social {
+    background: #4b9200; }
+
 .logo-footer-social {
   width: 26px;
   height: 26px;
   border-radius: 50%;
   background-color: rgba(196, 196, 196, 0.5); }
 
-.logo-facebook {
-  background-image: url(../../assets/svg/logo-facebook.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-
-.logo-twitter {
-  background-image: url(../../assets/svg/logo-twitter.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-
-.logo-instagram {
-  background-image: url(../../assets/svg/logo-instagram.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
-
-.logo-youtube {
-  background-image: url(../../assets/svg/logo-youtube.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%; }
+.social-list ul li a img {
+  width: 16px;
+  height: 18px;
+  position: relative;
+  top: 4px;
+  left: 5px; }
 
 .footer-nav nav ul {
   display: flex;
@@ -925,7 +1002,14 @@ table {
   font-size: 16px;
   line-height: 140%;
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.2s; }
+
+.footer-nav nav ul li a:hover {
+  color: #e47209; }
+
+.footer-nav nav ul li a:active {
+  color: #4b9200; }
 
 .footer-nav nav ul li {
   list-style: none; }
@@ -1018,6 +1102,14 @@ input[type="submit"] {
   font-weight: 100;
   font-size: 16px;
   line-height: 130%;
-  color: #ffffff; }
+  color: #ffffff;
+  cursor: pointer; }
+
+.footer-subscribe-designer:hover {
+  color: #4b9200;
+  text-decoration: underline; }
+
+.footer-subscribe-designer p:hover {
+  color: #4b9200; }
 
 /*# sourceMappingURL=style.css.map */
