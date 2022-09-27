@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
     <title>Donation zoo</title>
   </head>
   <body>
@@ -10,15 +11,15 @@
         <div class="container-header">
             <header class="header">
               <div class="logo-petstory">
-                <h1 class="logo-petstory-title">PetStory online</h1>
-                <div class="bamboo"></div>
+                <a href="../main/index.html"><h1 class="logo-petstory-title">PetStory online</h1>
+                  <div class="bamboo"></div></a>
               </div>
               <nav>
                 <ul>
                   <li><a href="../main/index.html">About</a></li>
                   <li><a href="#">Map</a></li>
-                  <li><a href="#">Zoos</a></li>
-                  <li><a href="../donate/index.html">Donate</a></li>
+                  <li><a href="../main/index.html#pets">Zoos</a></li>
+                  <li><a href="../donate/index.html" id="active">Donate</a></li>
                   <li><a href="#">Contact us</a></li>
                 </ul>
               </nav>
@@ -27,8 +28,8 @@
               </div>
             </header>
             <main class="main">
-                <div class="panda"></div>
-                <div class="donation-container">
+                <div class="panda" ></div>
+                <div class="donation-container" id="donation">
                     <section class="donation-information">
                         <h2>THE ZOO HAS OFFICIALLY REOPENED BUT WE STILL NEED YOUR HELP!</h2>
                         <p>Even though the Zoo has been able to reopen, we are at a greatly reduced capacity with educational programs and public and private events cancelled or postponed for additional months. We need you now more than ever to help ensure that we overcome these challenges. We have been actively raising funds in the community, and we are grateful for the generosity.  But much more support is still needed, and we need your help! Please consider a gift today – no matter what size – to help us sustain our mission.</p>
@@ -82,8 +83,6 @@
                             <button class="donation-button">FEED A FRIEND NOW</button>
                             <p id="share-soccial">Share with your friends on social networks </p>
                         </div>
-
-                      <!--test-->
                     </section>
                 </div>
             </main>
@@ -91,24 +90,23 @@
                 <footer class="footer">
                   <div class="footer-social">
                     <div class="logo-petstory logo-footer">
-                      <h1 class="logo-petstory-title">PetStory online</h1>
-                      <div class="bamboo"></div>
+                    <a href="../main/index.html">  <h1 class="logo-petstory-title">PetStory online</h1>
+                      <div class="bamboo"></div></a>
                     </div>
-                    <button class="footer-button-donate">DONATE FOR VOLUNTEERS</button>
+                    <a href="#donation"><button class="footer-button-donate">DONATE FOR VOLUNTEERS</button></a>
                     <div class="social-list">
                       <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank"><div class="logo-facebook logo-footer-social"></div>Facebook</a></li>
-                        <li><a href="https://twitter.com/?lang=en" target="_blank"><div class="logo-twitter logo-footer-social"></div>Twitter</a></li>
-                        <li><a href="https://www.instagram.com/" target="_blank"><div class="logo-instagram logo-footer-social"></div>Instagram</a></li>
-                        <li><a href="https://www.youtube.com/" target="_blank"><div class="logo-youtube logo-footer-social"></div>YouTube</a></li>
-                      </ul>
+                        <li><a href="https://www.facebook.com/" target="_blank"><div class="logo-footer-social"><img alt="logo" src="../../assets/svg/logo-facebook.svg"></div>Facebook</a></li>
+                <li><a href="https://twitter.com/?lang=en" target="_blank"><div  class="logo-footer-social"><img alt="logo" src="../../assets/svg/logo-twitter.svg"></div>Twitter</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><div  class="logo-footer-social"><img alt="logo" src="../../assets/svg/logo-instagram.svg"></div>Instagram</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><div class="logo-footer-social"><img alt="logo" src="../../assets/svg/logo-youtube.svg"></div>YouTube</a></li>
                     </div>
                   </div>
                   <div class="footer-nav">
                     <nav><ul>
-                      <li><a href="#">About</a></li>
+                      <li><a href="../main/index.html">About</a></li>
                       <li><a href="#">Map</a></li>
-                      <li><a href="#">Zoos</a></li>
+                      <li><a href="../main/index.html#pets">Zoos</a></li>
                       <li><a href="#">Contacts us</a></li>
                     </ul></nav>
                   </div>
