@@ -185,7 +185,7 @@ html {
   src: url(../../assets/fonts/Roboto-Thin.ttf); }
 .container-header {
   height: 80px;
-  background-color: #000000; }
+  background-color: #111115; }
 
 .header {
   display: flex;
@@ -1180,5 +1180,134 @@ input[type="submit"] {
   .pets-card-item-6 {
     width: 350px;
     height: 410px; } }
+@media (max-width: 1280px) {
+  .container-header {
+    position: relative;
+    z-index: 2; }
+
+  .header {
+    max-width: 1000px; }
+
+  .designed-by {
+    margin-left: 259px; }
+
+  .watch-online-container {
+    height: 504px;
+    background-image: url(../../assets/images/watch-online-background-adaptive1000px.jpg); }
+
+  .watch-online-info {
+    margin-top: 43px; }
+
+  .watch-online-title {
+    width: 400px;
+    height: 320px;
+    font-size: 85px; }
+
+  .watch-online-circle {
+    width: 367px;
+    height: 367px;
+    top: -11px; }
+
+  .the-backstage {
+    gap: 31px; }
+
+  .the-backstage-image {
+    margin-left: 30px;
+    width: 455px;
+    height: 408px;
+    background-image: url(../../assets/images/bamboo-cap-adaptive1000px.jpg); }
+
+  .pets-card-items {
+    max-width: 1000px;
+    row-gap: 92px;
+    column-gap: 29px; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-3,
+  .pets-card-item-4,
+  .pets-card-item-5,
+  .pets-card-item-6 {
+    width: 294px;
+    height: 354px; }
+
+  .pets-card-item-1-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-1-adaptive1000px.jpg); }
+
+  .pets-card-item-2-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-2-adaptive1000px.jpg); }
+
+  .pets-card-item-3-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-3-adaptive1000px.jpg); }
+
+  .pets-card-item-4-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-4-adaptive1000px.jpg); }
+
+  .pets-card-item-5-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-5-adaptive1000px.jpg); }
+
+  .pets-card-item-6-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-6-adaptive1000px.jpg); }
+
+  .pets-card-button-left,
+  .pets-card-button-right {
+    position: absolute; }
+
+  .pets-card-button-left {
+    left: 350px; }
+
+  .pets-card-button-right {
+    right: 350px; }
+
+  .pick-friends-wrapper {
+    max-width: 940px; }
+
+  .pick-friends h2 {
+    margin-top: 30px; }
+
+  .pick-friends p:nth-child(2) {
+    margin-left: 49px;
+    margin-top: 20px; }
+
+  .pick-friends p:nth-child(3) {
+    margin-top: 20px;
+    margin-left: 49px;
+    margin-right: 78px; }
+
+  .pick-friends p:nth-child(4) {
+    margin-left: 49px;
+    margin-right: 68px; }
+
+  .testimonials {
+    max-width: 940px; }
+
+  .testimonials-item {
+    width: 291px; }
+
+  .testimonials-item:nth-child(4) {
+    display: none; }
+
+  .footer {
+    max-width: 940px; }
+
+  .footer-subscribe {
+    position: absolute;
+    margin: 0;
+    right: 18px; }
+
+  .nav-link-1 {
+    margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
