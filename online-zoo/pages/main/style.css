@@ -1156,4 +1156,29 @@ input[type="submit"] {
 .footer-subscribe-designer p:hover {
   color: #4b9200; }
 
+@media (max-width: 1440px) {
+  .the-backstage-container {
+    background-image: url(../../assets/images/flower-the-backstage-image_adaptive_1000px.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 44%; }
+
+  .pets-cards {
+    max-width: 1280px;
+    gap: 0; }
+
+  .pets-container {
+    background: url(../../assets/images/palm_foto_adaptive_1000px.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia_adaptive_1000px.jpg) no-repeat 100% 100%; }
+
+  .pets-card-items {
+    justify-content: center; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-3,
+  .pets-card-item-4,
+  .pets-card-item-5,
+  .pets-card-item-6 {
+    width: 350px;
+    height: 410px; } }
+
 /*# sourceMappingURL=style.css.map */
