@@ -646,6 +646,12 @@ html {
   .pets-card-item-6:hover .pets-card-block-food {
     visibility: hidden; }
 
+.pets-card-item-title-change-2 {
+  display: none; }
+
+.pets-card-item-location-change-2 {
+  display: none; }
+
 .pick-friends-container {
   background-image: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   display: flex;
@@ -1183,10 +1189,14 @@ input[type="submit"] {
 @media (max-width: 1280px) {
   .container-header {
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    padding: 0 30px; }
 
   .header {
     max-width: 1000px; }
+
+  .header nav ul {
+    gap: 48px; }
 
   .designed-by {
     margin-left: 259px; }
@@ -1196,7 +1206,9 @@ input[type="submit"] {
     background-image: url(../../assets/images/watch-online-background-adaptive1000px.jpg); }
 
   .watch-online-info {
-    margin-top: 43px; }
+    margin-top: 43px;
+    margin-right: 86px;
+    gap: 40px; }
 
   .watch-online-title {
     width: 400px;
@@ -1206,16 +1218,31 @@ input[type="submit"] {
   .watch-online-circle {
     width: 367px;
     height: 367px;
-    top: -11px; }
+    top: -11px;
+    left: 309px; }
 
   .the-backstage {
-    gap: 31px; }
+    gap: 31px;
+    height: 669px; }
+
+  .the-backstage-container {
+    background: #ffffff; }
 
   .the-backstage-image {
     margin-left: 30px;
+    margin-top: 109px;
     width: 455px;
     height: 408px;
     background-image: url(../../assets/images/bamboo-cap-adaptive1000px.jpg); }
+
+  .the-backstage-text {
+    margin-top: 100px; }
+
+  .text-two {
+    width: 454px; }
+
+  .pets-container {
+    height: 1075px; }
 
   .pets-card-items {
     max-width: 1000px;
@@ -1266,13 +1293,44 @@ input[type="submit"] {
     position: absolute; }
 
   .pets-card-button-left {
-    left: 350px; }
+    left: 353px; }
 
   .pets-card-button-right {
-    right: 350px; }
+    right: 352px; }
+
+  .pets-card-item-title-change-1,
+  .pets-card-item-location-change-1 {
+    display: none; }
+
+  .pets-card-item-title-change-2,
+  .pets-card-item-location-change-2 {
+    display: inline; }
+
+  .pets-card-item-3
+  .pets-card-block
+  .pets-card-block-food
+  .pets-card-block-food-1 {
+    background-image: url(../../assets/svg/steak_icon.svg);
+    left: 9px; }
+
+  .pets-card-item-3
+  .pets-card-block
+  .pets-card-block-food
+  .pets-card-block-food-2 {
+    background-image: url(../../assets/svg/fish_icon.svg);
+    width: 35px;
+    top: -19px; }
+
+  .pick-friends-container {
+    height: 876px; }
 
   .pick-friends-wrapper {
-    max-width: 940px; }
+    max-width: 940px;
+    height: 796px;
+    margin-top: 30px; }
+
+  .pick-friends h3 {
+    margin-top: 42px; }
 
   .pick-friends h2 {
     margin-top: 30px; }
@@ -1290,22 +1348,58 @@ input[type="submit"] {
     margin-left: 49px;
     margin-right: 68px; }
 
+  .how-it-work {
+    margin-bottom: 71px; }
+
+  .testimonials-container {
+    height: 842px;
+    background-image: url(../../../assets/images/leav_foto_adaptove1000px.jpg);
+    background-position: 100% 116.7%; }
+
   .testimonials {
-    max-width: 940px; }
+    max-width: 940px;
+    padding-top: 101px; }
 
   .testimonials-item {
     width: 291px; }
 
+  .testimonials-cards {
+    margin-top: 28px;
+    justify-content: space-between; }
+
   .testimonials-item:nth-child(4) {
     display: none; }
 
+  input[type="range"] {
+    width: 403px; }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 75px; }
+
+  .testimonials-button {
+    margin-top: 53px; }
+
   .footer {
     max-width: 940px; }
+
+  .footer-social {
+    margin-left: 14px; }
+
+  .footer-nav {
+    position: relative;
+    left: -8px; }
+
+  .footer-nav nav ul {
+    gap: 48px; }
 
   .footer-subscribe {
     position: absolute;
     margin: 0;
     right: 18px; }
+
+  .footer-subscribe-items {
+    position: relative;
+    right: 32px; }
 
   .nav-link-1 {
     margin: 0; } }
