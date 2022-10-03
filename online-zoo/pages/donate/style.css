@@ -177,7 +177,7 @@ html {
 
 .container-header {
   height: 80px;
-  background-color: #000000; }
+  background-color: #111115; }
 
 .header {
   display: flex;
@@ -267,7 +267,7 @@ html {
   line-height: 130%;
   color: #ffffff; }
 
-.donation-information p {
+.donation-information-text {
   margin-top: 10px;
   font-family: "Roboto";
   font-style: normal;
@@ -760,5 +760,157 @@ input[type="submit"] {
 
 .footer-subscribe-designer p:hover {
   color: #4b9200; }
+
+@media (max-width: 1280px) {
+  .header {
+    max-width: 1000px;
+    padding: 0 30px; }
+
+  .designed-by {
+    margin-left: 259px; }
+
+  .header nav ul {
+    gap: 48px; }
+
+  .panda {
+    height: 390px;
+    background-image: url(../../assets/images/panda_bg_page_donate_adaptive_1000px.jpg); }
+
+  .donation-container {
+    height: 1333px; }
+
+  .donation-information {
+    max-width: 1000px; }
+
+  .donation-information h2 {
+    width: 780px;
+    padding-left: 30px; }
+
+  .donation-information-text {
+    width: 960px;
+    margin-top: 30px;
+    padding-left: 30px; }
+
+  .donation-info {
+    padding-left: 30px;
+    margin-bottom: 39px; }
+
+  .pick-friend-container {
+    max-width: 940px;
+    margin: 0 auto;
+    height: 918px; }
+
+  .pick-friend h3 {
+    padding-top: 20px;
+    text-align: center;
+    margin: 0;
+    padding-right: 16px; }
+
+  .pick-friend p {
+    margin-left: 0;
+    text-align: center; }
+
+  #pick-friends-text {
+    width: 849px;
+    margin-top: 10px;
+    margin-left: 44px;
+    padding: 0; }
+
+  .value-donation-steps:nth-child(1),
+  .value-donation-steps:nth-child(1),
+  .value-price-1 {
+    display: none; }
+
+  .value-donation {
+    width: 810px;
+    margin-left: 65px; }
+
+  .value-price {
+    width: 830px;
+    margin-top: 14px;
+    margin-left: 64px;
+    gap: 55px; }
+
+  .value-price-2,
+  .value-price-3,
+  .value-price-4,
+  .value-price-5,
+  .value-price-6,
+  .value-price-7,
+  .value-price-8 {
+    margin: 0;
+    padding: 0; }
+
+  .value-price-5 {
+    margin-left: 16px; }
+
+  .value-price-6 {
+    margin-left: 16px; }
+
+  .value-price-7 {
+    margin-left: 16px; }
+
+  .value-price-8 {
+    margin-left: 31px; }
+
+  .value-donation-line {
+    width: 790px; }
+
+  .value-number-price {
+    margin-top: 47px; }
+
+  .monthly-and-once {
+    margin-left: 359px; }
+
+  .donation-button {
+    margin-top: 28px; }
+
+  #share-soccial {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%; }
+
+  .footer {
+    max-width: 1000px; }
+
+  .footer-nav nav ul {
+    gap: 48px; }
+
+  .footer-nav {
+    margin-left: -45px;
+    position: relative;
+    left: 50px; }
+
+  .footer-subscribe {
+    margin: 0; }
+
+  .logo-footer {
+    margin-right: 0;
+    margin-left: 31px;
+    margin-top: 39px; }
+
+  .footer-button-donate {
+    margin-top: 70px;
+    margin-left: 31px; }
+
+  .social-list {
+    margin-left: 31px; }
+
+  .footer-subscribe-items {
+    position: relative;
+    left: -41px; }
+
+  .footer-subscribe-designer {
+    position: relative;
+    left: -11px; }
+
+  #amount {
+    margin-left: 65px;
+    margin-top: 49px; }
+
+  input[type="number"]::placeholder {
+    font-size: 16px; } }
 
 /*# sourceMappingURL=style.css.map */
