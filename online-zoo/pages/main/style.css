@@ -185,7 +185,7 @@ html {
   src: url(../../assets/fonts/Roboto-Thin.ttf); }
 .container-header {
   height: 80px;
-  background-color: #000000; }
+  background-color: #111115; }
 
 .header {
   display: flex;
@@ -265,6 +265,9 @@ html {
 
 #active {
   color: #e47209; }
+
+.burger-menu {
+  display: none; }
 
 .watch-online-container {
   height: 700px;
@@ -383,6 +386,9 @@ html {
   background-repeat: no-repeat;
   background-position: 100% 11%; }
 
+.the-backstage-text .watch-online-button {
+  display: none; }
+
 .pets {
   max-width: 1360px;
   margin: 0 auto;
@@ -398,7 +404,7 @@ html {
 
 .pets-card-items {
   display: flex;
-  width: 1160px;
+  max-width: 1160px;
   flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 30px; }
@@ -646,6 +652,12 @@ html {
   .pets-card-item-6:hover .pets-card-block-food {
     visibility: hidden; }
 
+.pets-card-item-title-change-2 {
+  display: none; }
+
+.pets-card-item-location-change-2 {
+  display: none; }
+
 .pick-friends-container {
   background-image: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   display: flex;
@@ -800,6 +812,9 @@ html {
 a {
   text-decoration: none; }
 
+.how-it-work-green-arrow {
+  display: none; }
+
 .testimonials-container {
   background-image: url(../../assets/images/leav_foto.jpg);
   background-repeat: no-repeat;
@@ -827,12 +842,14 @@ a {
   gap: 29px; }
 
 .testimonials-item {
-  width: 266px;
+  width: 268px;
   height: 391px;
-  border: 1px solid;
-  border-image: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
-  border-radius: 25px;
-  border-image-slice: 1; }
+  text-align: start;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background-image: linear-gradient(#f1f3f2, #f1f3f2), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  background-origin: border-box;
+  background-clip: content-box, border-box; }
 
 .testimonials-item-data-1 {
   margin-left: -5px; }
@@ -1153,5 +1170,891 @@ input[type="submit"] {
 
 .footer-subscribe-designer p:hover {
   color: #4b9200; }
+
+@media (max-width: 1440px) {
+  .the-backstage-container {
+    background-image: url(../../assets/images/flower-the-backstage-image_adaptive_1000px.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 44%; }
+
+  .pets-cards {
+    max-width: 1280px;
+    gap: 0; }
+
+  .pets-container {
+    background: url(../../assets/images/palm_foto_adaptive_1000px.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia_adaptive_1000px.jpg) no-repeat 100% 100%; }
+
+  .pets-card-items {
+    justify-content: center; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-3,
+  .pets-card-item-4,
+  .pets-card-item-5,
+  .pets-card-item-6 {
+    width: 350px;
+    height: 410px; } }
+@media (max-width: 1280px) {
+  .container-header {
+    position: relative;
+    z-index: 2;
+    padding: 0 30px; }
+
+  .header {
+    max-width: 1000px; }
+
+  .header nav ul {
+    gap: 48px; }
+
+  .designed-by {
+    margin: 0;
+    position: relative;
+    right: -259px; }
+
+  .watch-online-container {
+    height: 504px;
+    background-image: url(../../assets/images/watch-online-background-adaptive1000px.jpg); }
+
+  .watch-online-info {
+    margin-top: 43px;
+    margin-right: 86px;
+    gap: 40px; }
+
+  .watch-online-title {
+    width: 400px;
+    height: 320px;
+    font-size: 85px; }
+
+  .watch-online-circle {
+    width: 367px;
+    height: 367px;
+    top: -11px;
+    left: 309px; }
+
+  .the-backstage {
+    gap: 31px;
+    height: 669px; }
+
+  .the-backstage-container {
+    background: #ffffff; }
+
+  .the-backstage-image {
+    margin-left: 30px;
+    margin-top: 109px;
+    width: 455px;
+    height: 408px;
+    background-image: url(../../assets/images/bamboo-cap-adaptive1000px.jpg); }
+
+  .the-backstage-text {
+    margin-top: 100px; }
+
+  .text-two {
+    width: 454px; }
+
+  .pets-container {
+    height: 1075px; }
+
+  .pets-card-items {
+    max-width: 1000px;
+    row-gap: 92px;
+    column-gap: 29px; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-3,
+  .pets-card-item-4,
+  .pets-card-item-5,
+  .pets-card-item-6 {
+    width: 294px;
+    height: 354px; }
+
+  .pets-card-item-1-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-1-adaptive1000px.jpg); }
+
+  .pets-card-item-2-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-2-adaptive1000px.jpg); }
+
+  .pets-card-item-3-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-3-adaptive1000px.jpg); }
+
+  .pets-card-item-4-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-4-adaptive1000px.jpg); }
+
+  .pets-card-item-5-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-5-adaptive1000px.jpg); }
+
+  .pets-card-item-6-img {
+    width: 294px;
+    height: 294px;
+    background-image: url(../../../assets/images/pets-img-item-6-adaptive1000px.jpg); }
+
+  .pets-card-button-left,
+  .pets-card-button-right {
+    position: absolute; }
+
+  .pets-card-button-left {
+    left: 353px; }
+
+  .pets-card-button-right {
+    right: 352px; }
+
+  .pets-card-item-title-change-1,
+  .pets-card-item-location-change-1 {
+    display: none; }
+
+  .pets-card-item-title-change-2,
+  .pets-card-item-location-change-2 {
+    display: inline; }
+
+  .pets-card-item-3
+  .pets-card-block
+  .pets-card-block-food
+  .pets-card-block-food-1 {
+    background-image: url(../../assets/svg/steak_icon.svg);
+    left: 9px; }
+
+  .pets-card-item-3
+  .pets-card-block
+  .pets-card-block-food
+  .pets-card-block-food-2 {
+    background-image: url(../../assets/svg/fish_icon.svg);
+    width: 35px;
+    top: -19px; }
+
+  .pick-friends-container {
+    height: 876px; }
+
+  .pick-friends-wrapper {
+    max-width: 940px;
+    height: 796px;
+    margin-top: 30px; }
+
+  .pick-friends h3 {
+    margin-top: 42px; }
+
+  .pick-friends h2 {
+    margin-top: 30px; }
+
+  .pick-friends p:nth-child(2) {
+    margin-left: 49px;
+    margin-top: 20px; }
+
+  .pick-friends p:nth-child(3) {
+    margin-top: 20px;
+    margin-left: 49px;
+    margin-right: 78px; }
+
+  .pick-friends p:nth-child(4) {
+    margin-left: 49px;
+    margin-right: 68px; }
+
+  .how-it-work {
+    margin-bottom: 71px; }
+
+  .testimonials-container {
+    height: 842px;
+    background-image: url(../../../assets/images/leav_foto_adaptove1000px.jpg);
+    background-position: 100% 116.7%; }
+
+  .testimonials {
+    max-width: 940px;
+    padding-top: 101px; }
+
+  .testimonials-item {
+    width: 291px; }
+
+  .testimonials-cards {
+    margin-top: 28px;
+    justify-content: space-between; }
+
+  .testimonials-item:nth-child(4) {
+    display: none; }
+
+  input[type="range"] {
+    width: 403px; }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 75px; }
+
+  .testimonials-button {
+    margin-top: 53px; }
+
+  .footer {
+    max-width: 940px; }
+
+  .footer-social {
+    margin-left: 14px; }
+
+  .footer-nav {
+    position: relative;
+    left: -8px; }
+
+  .footer-nav nav ul {
+    gap: 48px; }
+
+  .footer-subscribe {
+    position: absolute;
+    margin: 0;
+    right: 18px; }
+
+  .footer-subscribe-items {
+    position: relative;
+    right: 32px; }
+
+  .nav-link-1 {
+    margin: 0; } }
+@media (max-width: 980px) {
+  .container-header {
+    height: 34px;
+    padding: 0; }
+
+  .header {
+    max-width: 640px;
+    height: 34px;
+    justify-content: space-between; }
+
+  .header nav {
+    display: none; }
+
+  .designed-by {
+    display: none; }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18px;
+    height: 10px;
+    margin-right: 20px;
+    cursor: pointer; }
+
+  .burger-menu-line {
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #ffffff; }
+
+  .logo-petstory {
+    border: none;
+    width: 47px;
+    height: 29px;
+    margin-left: 20px; }
+
+  .logo-petstory-title {
+    font-size: 12px; }
+
+  .bamboo {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 14px;
+    top: -16px;
+    left: 5px; }
+
+  .watch-online {
+    max-width: 640px;
+    justify-content: flex-end; }
+
+  .watch-online-container {
+    height: 339px;
+    background-position: 0px -35px; }
+
+  .watch-online-title {
+    width: 255px;
+    height: 204px;
+    font-size: 54px;
+    align-self: flex-end; }
+
+  .watch-online-info {
+    gap: 0;
+    margin-top: 48px;
+    margin-right: 17px; }
+
+  .watch-online-circle {
+    width: 237px;
+    height: 237px;
+    top: 10px;
+    left: 243px; }
+
+  .watch-online-button {
+    position: relative;
+    left: -305px;
+    bottom: 7px; }
+
+  .the-backstage-container {
+    background-image: url(../../../assets/images/flower-the-backstage-image_adaptive_640px.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% -22%; }
+
+  .the-backstage {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 507px; }
+
+  .the-backstage-text {
+    margin-top: 60px; }
+
+  .the-backstage-image {
+    display: none; }
+
+  .the-backstage-text h3 {
+    margin-top: 30px; }
+
+  .text-two {
+    width: 482px;
+    margin-top: 19px; }
+
+  .pets {
+    max-width: 600px; }
+
+  .pets-container {
+    height: 970px;
+    background: url(../../assets/images/palm_foto_adaptive_640px.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia_adaptive_640px.jpg) no-repeat 100% 100%; }
+
+  .pets-card-item-3,
+  .pets-card-item-6 {
+    display: none; }
+
+  .pets-card-items {
+    max-width: 640px; }
+
+  .pets-card-block {
+    margin-left: 10px; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-4,
+  .pets-card-item-5 {
+    width: 285px;
+    height: 332px;
+    gap: 0; }
+
+  .pets-card-item-1-img,
+  .pets-card-item-2-img,
+  .pets-card-item-4-img,
+  .pets-card-item-5-img {
+    width: 285px;
+    height: 285px; }
+
+  .pets-card-item-1-img {
+    background-image: url(../../../assets/images/pets-img-item-1-adaptive640px.jpg); }
+
+  .pets-card-item-2-img {
+    background-image: url(../../../assets/images/pets-img-item-2-adaptive640px.jpg); }
+
+  .pets-card-item-4-img {
+    background-image: url(../../../assets/images/pets-img-item-4-adaptive640px.jpg); }
+
+  .pets-card-item-5-img {
+    background-image: url(../../../assets/images/pets-img-item-5-adaptive640px.jpg); }
+
+  .pets-card-item-title {
+    font-size: 12.5px;
+    padding-top: 9px;
+    line-height: 130%; }
+
+  .petts-card-item-location {
+    font-size: 11.7px; }
+
+  .pets-card-block-food-2 {
+    background-size: contain;
+    width: 28px;
+    height: 24px;
+    top: -15px;
+    left: 25px; }
+
+  .pets-card-block-food-1 {
+    background-size: contain;
+    width: 24px;
+    height: 27px;
+    top: 9px;
+    left: 28px; }
+
+  .pets-card-block-food-3 {
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    top: 12px;
+    left: 21px; }
+
+  .pets-card-block-food-4 {
+    background-size: contain;
+    width: 29px;
+    height: 19px;
+    top: -5px;
+    left: 26px; }
+
+  .pets-card-button-right {
+    right: 242px; }
+
+  .pets-card-button-left {
+    left: 243px; }
+
+  .pets-button {
+    margin-top: 60px; }
+
+  .pick-friends-wrapper {
+    margin-top: 20px;
+    max-width: 640px;
+    height: 741px; }
+
+  .pick-friends-container {
+    height: 781px; }
+
+  .pick-friends h2 {
+    font-size: 42px;
+    margin-top: 10px; }
+
+  .pick-friends p:nth-child(2) {
+    margin-left: 20px;
+    letter-spacing: -0.88px; }
+
+  .pick-friends p:nth-child(3) {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 25px; }
+
+  .pick-friends p:nth-child(4) {
+    margin-left: 20px;
+    margin-right: 25px; }
+
+  .pick-friends h3 {
+    margin-top: 31px;
+    margin-bottom: -9px; }
+
+  .how-it-work {
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: 20px;
+    justify-content: space-between; }
+
+  .how-it-work-item:nth-child(5) {
+    margin-right: 12px; }
+
+  .how-it-work-arrow {
+    display: none; }
+
+  .how-it-work-green-arrow-container {
+    position: relative;
+    width: 296px;
+    top: 12px;
+    left: 158px;
+    display: flex;
+    gap: 118px; }
+
+  .how-it-work-green-arrow {
+    display: block;
+    height: 29px;
+    width: 89px;
+    background-image: url(../../assets/images/green-arow.png); }
+
+  .testimonials-container {
+    max-width: 640px;
+    margin: 0 auto;
+    height: 668px;
+    background-image: url(../../assets/images/leav_foto_adaptove640px.jpg);
+    background-position: 100% 114.7%; }
+
+  .testimonials {
+    padding-top: 61px;
+    padding-left: 20px; }
+
+  .testimonials h2 {
+    text-align: start;
+    margin-left: 195px; }
+
+  .testimonials-cards {
+    flex-direction: column;
+    gap: 16px; }
+
+  .testimonials-item {
+    width: 600px;
+    height: 109px; }
+
+  .testimonials-item-title {
+    margin-top: 14px;
+    margin-left: 10px; }
+
+  .commit-1-hidden {
+    display: none; }
+
+  .commit-2-hidden {
+    display: none; }
+
+  .commit-3-hidden {
+    display: none; }
+
+  input[type="range"] {
+    display: none; }
+
+  .testimonials-button {
+    position: relative;
+    margin: 0;
+    left: 180px;
+    top: 18px;
+    width: 240px; }
+
+  .footer-container {
+    height: 282px; }
+
+  .footer {
+    max-width: 600px;
+    height: 284px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px; }
+
+  .footer-social {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 178px; }
+
+  .footer-social .logo-petstory {
+    margin-left: 0; }
+
+  .footer-subscribe-items {
+    display: none; }
+
+  .logo-footer .logo-petstory-title {
+    font-size: 19px;
+    margin-top: 0.5px; }
+
+  .logo-footer {
+    border: 1px solid #ffffff;
+    width: 82px;
+    height: 52px;
+    padding-left: 3px;
+    margin-top: 13px; }
+
+  .logo-footer .bamboo {
+    top: -18px;
+    left: 15px; }
+
+  .footer-button-donate {
+    margin: 0;
+    position: relative;
+    top: 97px;
+    left: -211px; }
+
+  .social-list-hidden {
+    display: none; }
+
+  .social-list ul li a {
+    width: 26px; }
+
+  .social-list {
+    margin: 0;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column; }
+
+  .social-list ul {
+    gap: 20px; }
+
+  .footer-subscribe {
+    position: relative;
+    top: 38px;
+    right: 0; }
+
+  .footer-subscribe-designer {
+    margin: 0; }
+
+  .footer-nav {
+    margin: 0;
+    left: 0;
+    align-self: flex-start;
+    order: 3; }
+
+  .footer-nav nav ul {
+    gap: 37px; } }
+@media (max-width: 639px) {
+  .header {
+    max-width: 320px; }
+
+  .burger-menu {
+    margin-right: 10px; }
+
+  .watch-online-container {
+    height: 187px;
+    background-image: url(../../../assets/images/watch-online-background-adaptive320px.jpg);
+    background-position: 0 0; }
+
+  .watch-online {
+    justify-content: flex-start;
+    max-width: 320px; }
+
+  .watch-online-circle {
+    width: 119px;
+    height: 119px;
+    top: 22px;
+    left: 163px; }
+
+  .watch-online-info {
+    position: relative;
+    left: 63px;
+    margin-top: 42px;
+    margin-left: 0;
+    margin-right: 0; }
+
+  .watch-online-title {
+    width: 128px;
+    height: 102px;
+    font-size: 28px; }
+
+  .watch-online-button {
+    display: none; }
+
+  .logo-petstory {
+    margin-left: 10px; }
+
+  .logo-petstory-title {
+    margin-top: 0.5px; }
+
+  .the-backstage-container {
+    background-image: url(../../../assets/images/flower-the-backstage-image_adaptive_320px.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 14%; }
+
+  .the-backstage-text .watch-online-button {
+    display: block;
+    left: 0;
+    bottom: 31px;
+    margin: 0;
+    padding: 0; }
+
+  .the-backstage {
+    max-width: 320px;
+    padding: 0 10px;
+    height: 532px; }
+
+  .the-backstage-text {
+    margin-top: 51px; }
+
+  .the-backstage-text h2 {
+    font-size: 24px;
+    width: 300px; }
+
+  .text-one {
+    width: 300px;
+    margin-top: 9px; }
+
+  .the-backstage-text h3 {
+    margin-top: 18px; }
+
+  .text-two {
+    width: 300px;
+    margin-top: 9px; }
+
+  .pets {
+    max-width: 320px; }
+
+  .pets-container {
+    height: 1522px;
+    background: url(../../assets/images/palm_foto_adaptive_320px.jpg) no-repeat 0% 100%, url(../../assets/images/strelitzia_adaptive_320px.jpg) no-repeat 100% 100%; }
+
+  .pets-card-items {
+    max-width: 320px;
+    gap: 20px; }
+
+  .pets-card-button-left,
+  .pets-card-button-right {
+    display: none; }
+
+  .pets-card-items {
+    justify-content: flex-start; }
+
+  .pets-card-item-1,
+  .pets-card-item-2,
+  .pets-card-item-4,
+  .pets-card-item-5 {
+    margin-left: 10px; }
+
+  .pets-button {
+    margin-top: 20px; }
+
+  .pick-friends-wrapper {
+    margin: 20px 10px;
+    height: 1042px; }
+
+  .pick-friends {
+    max-width: 300px;
+    margin: 0 auto; }
+
+  .pick-friends-container {
+    height: 1082px; }
+
+  .pick-friends h2 {
+    font-size: 24px;
+    margin-top: 21px; }
+
+  .pick-friends p:nth-child(2) {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: 11px;
+    width: 297px;
+    letter-spacing: 0;
+    text-align: center; }
+
+  .pick-friends p:nth-child(3),
+  .pick-friends p:nth-child(4) {
+    display: none; }
+
+  .pick-friends h3 {
+    font-size: 24px;
+    margin-top: 18px;
+    margin-bottom: 31px; }
+
+  .how-it-work-green-arrow-container {
+    position: static;
+    width: 34px;
+    height: 410px;
+    background: url(../../assets/images/arrow-adaptive-320px.png) no-repeat 18% 1%, url(../../assets/images/arrow-adaptive-320px.png) no-repeat 20% 79%; }
+
+  .how-it-work-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+  .how-it-work {
+    flex-direction: column;
+    width: 175px;
+    margin-left: 36px;
+    margin-bottom: 0px;
+    gap: 29px; }
+
+  .how-it-work-item:nth-child(5) {
+    margin-right: 0px; }
+
+  .how-it-work-text {
+    margin-top: 10px; }
+
+  .how-it-work-button {
+    margin-top: 38px; }
+
+  .testimonials {
+    max-width: 320px;
+    padding-left: 11px;
+    padding-top: 29px; }
+
+  .testimonials-container {
+    height: 580px;
+    background-image: url(../../assets/images/leav_foto_adaptove320px.jpg);
+    background-position: 100% 106.7%; }
+
+  .testimonials h2 {
+    font-size: 24px;
+    text-align: center;
+    margin: 0; }
+
+  .testimonials-cards {
+    margin-top: 19px; }
+
+  .commit-1-hidden-320 {
+    display: none; }
+
+  .commit-2-hidden-320 {
+    display: none; }
+
+  .commit-3-hidden-320 {
+    display: none; }
+
+  .testimonials-item {
+    width: 299px; }
+
+  .testimonials-item-title {
+    margin-top: 8px;
+    margin-left: 10px; }
+
+  .testimonials-button {
+    top: 7px;
+    left: 29px; }
+
+  .footer-container {
+    height: 335px; }
+
+  .footer-social {
+    order: 1; }
+
+  .footer-subscribe {
+    order: 2; }
+
+  .footer-nav {
+    order: 3;
+    margin-left: 10px; }
+
+  .footer-social {
+    flex-direction: column;
+    height: 183px; }
+
+  .footer-social .logo-footer {
+    order: 1; }
+
+  .footer-social a {
+    order: 3; }
+
+  .footer-social .social-list {
+    order: 2;
+    margin-bottom: 10px; }
+
+  .social-list ul {
+    flex-direction: row; }
+
+  .footer-button-donate {
+    position: static; }
+
+  .footer-subscribe {
+    position: static; }
+
+  .footer {
+    max-width: 300px;
+    height: 314px;
+    justify-content: space-between;
+    gap: 0; }
+
+  .logo-footer {
+    width: 136px;
+    border: none;
+    margin: 0;
+    align-self: center;
+    justify-content: center; }
+
+  .logo-footer .logo-petstory-title {
+    margin-top: 20px; }
+
+  .logo-footer .bamboo {
+    top: -26px;
+    left: 72px;
+    width: 16px;
+    height: 24px; }
+
+  .social-list {
+    padding: 0;
+    align-self: center; }
+
+  .social-list ul {
+    gap: 30px; }
+
+  .footer-nav nav ul {
+    gap: 31px; }
+
+  .footer-subscribe-designer p {
+    margin-bottom: 0px;
+    font-size: 15px; }
+
+  .footer-subscribe-designer p:nth-child(2) {
+    margin-top: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
