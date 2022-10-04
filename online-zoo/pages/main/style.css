@@ -1394,7 +1394,7 @@ input[type="submit"] {
     margin-top: 53px; }
 
   .footer {
-    max-width: 940px; }
+    max-width: 960px; }
 
   .footer-social {
     margin-left: 14px; }
@@ -1413,7 +1413,7 @@ input[type="submit"] {
 
   .footer-subscribe-items {
     position: relative;
-    right: 32px; }
+    right: 44px; }
 
   .nav-link-1 {
     margin: 0; } }
@@ -1883,7 +1883,7 @@ input[type="submit"] {
   .pets-card-item-2,
   .pets-card-item-4,
   .pets-card-item-5 {
-    margin-left: 10px; }
+    margin-left: 16px; }
 
   .pets-button {
     margin-top: 20px; }
