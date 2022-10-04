@@ -1272,32 +1272,32 @@ input[type="submit"] {
   .pets-card-item-1-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-1-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-1-adaptive1000px.jpg); }
 
   .pets-card-item-2-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-2-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-2-adaptive1000px.jpg); }
 
   .pets-card-item-3-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-3-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-3-adaptive1000px.jpg); }
 
   .pets-card-item-4-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-4-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-4-adaptive1000px.jpg); }
 
   .pets-card-item-5-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-5-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-5-adaptive1000px.jpg); }
 
   .pets-card-item-6-img {
     width: 294px;
     height: 294px;
-    background-image: url(../../../assets/images/pets-img-item-6-adaptive1000px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-6-adaptive1000px.jpg); }
 
   .pets-card-button-left,
   .pets-card-button-right {
@@ -1364,7 +1364,7 @@ input[type="submit"] {
 
   .testimonials-container {
     height: 842px;
-    background-image: url(../../../assets/images/leav_foto_adaptove1000px.jpg);
+    background-image: url(../../assets/images/leav_foto_adaptove1000px.jpg);
     background-position: 100% 116.7%; }
 
   .testimonials {
@@ -1493,7 +1493,7 @@ input[type="submit"] {
     bottom: 7px; }
 
   .the-backstage-container {
-    background-image: url(../../../assets/images/flower-the-backstage-image_adaptive_640px.jpg);
+    background-image: url(../../assets/images/flower-the-backstage-image_adaptive_640px.jpg);
     background-repeat: no-repeat;
     background-position: 100% -22%; }
 
@@ -1549,16 +1549,16 @@ input[type="submit"] {
     height: 285px; }
 
   .pets-card-item-1-img {
-    background-image: url(../../../assets/images/pets-img-item-1-adaptive640px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-1-adaptive640px.jpg); }
 
   .pets-card-item-2-img {
-    background-image: url(../../../assets/images/pets-img-item-2-adaptive640px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-2-adaptive640px.jpg); }
 
   .pets-card-item-4-img {
-    background-image: url(../../../assets/images/pets-img-item-4-adaptive640px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-4-adaptive640px.jpg); }
 
   .pets-card-item-5-img {
-    background-image: url(../../../assets/images/pets-img-item-5-adaptive640px.jpg); }
+    background-image: url(../../assets/images/pets-img-item-5-adaptive640px.jpg); }
 
   .pets-card-item-title {
     font-size: 12.5px;
@@ -1789,7 +1789,7 @@ input[type="submit"] {
 
   .watch-online-container {
     height: 187px;
-    background-image: url(../../../assets/images/watch-online-background-adaptive320px.jpg);
+    background-image: url(../../assets/images/watch-online-background-adaptive320px.jpg);
     background-position: 0 0; }
 
   .watch-online {
@@ -1824,7 +1824,7 @@ input[type="submit"] {
     margin-top: 0.5px; }
 
   .the-backstage-container {
-    background-image: url(../../../assets/images/flower-the-backstage-image_adaptive_320px.jpg);
+    background-image: url(../../assets/images/flower-the-backstage-image_adaptive_320px.jpg);
     background-repeat: no-repeat;
     background-position: 100% 14%; }
 
