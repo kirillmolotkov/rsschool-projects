@@ -1419,8 +1419,11 @@ input[type="submit"] {
     margin: 0; } }
 @media (max-width: 980px) {
   .container-header {
+    position: fixed;
+    width: 100%;
     height: 34px;
-    padding: 0; }
+    padding: 0;
+    z-index: 10; }
 
   .header {
     max-width: 640px;
