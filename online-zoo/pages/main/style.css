@@ -269,6 +269,24 @@ html {
 .burger-menu {
   display: none; }
 
+.burger-menu-open {
+  display: none; }
+
+.burger-menu-open-active {
+  display: block;
+  position: absolute;
+  height: 329px;
+  width: 100%;
+  z-index: 11;
+  background-color: #ffffff;
+  top: 0; }
+
+.shadow-active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .watch-online-container {
   height: 700px;
   background-image: url(../../assets/images/watch-online-background.jpg);
@@ -1468,6 +1486,74 @@ input[type="submit"] {
     top: -16px;
     left: 5px; }
 
+  .container-burger-menu {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 33px; }
+
+  .header-burger-menu {
+    display: flex;
+    justify-content: space-between; }
+
+  .burger-menu-open-logo {
+    width: 66px;
+    height: 42px;
+    border-radius: 2px;
+    border: 1px solid #fe9013; }
+
+  .burger-menu-open-logo h1 {
+    color: #fe9013; }
+
+  .burger-menu-close {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer; }
+
+  .burger-menu-close-line {
+    height: 2px;
+    width: 34px;
+    border-radius: 1px;
+    background-color: #fe9013; }
+
+  .burger-menu-close-line:nth-child(1) {
+    transform: rotateZ(45deg) translateY(1px) translateX(1px); }
+
+  .burger-menu-close-line:nth-child(2) {
+    transform: rotateZ(-45deg); }
+
+  .burger-menu-open-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; }
+
+  .burger-menu-open-nav a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333b41;
+    text-decoration: none;
+    transition: 0.3s; }
+
+  .burger-menu-open-nav a:hover {
+    color: #fe9013; }
+
+  .burger-menu-open-nav li {
+    list-style: none; }
+
+  .shadow-active {
+    height: 3548px; }
+
   .watch-online {
     max-width: 640px;
     justify-content: flex-end; }
@@ -1793,10 +1879,16 @@ input[type="submit"] {
   .burger-menu {
     margin-right: 10px; }
 
+  .container-burger-menu {
+    max-width: 300px; }
+
   .watch-online-container {
     height: 187px;
     background-image: url(../../assets/images/watch-online-background-adaptive320px.jpg);
     background-position: 0 0; }
+
+  .shadow-active {
+    height: 4235px; }
 
   .watch-online {
     justify-content: flex-start;
