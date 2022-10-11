@@ -464,9 +464,6 @@ img {
   line-height: 140%;
   color: #333b41; }
 
-.value-price .value-price-3 {
-  color: #fe9013; }
-
 .value-number-price {
   display: flex;
   margin-top: 50px;
@@ -1130,12 +1127,6 @@ input[type="submit"] {
   .value-donation-steps:nth-child(3) {
     display: none; }
 
-  .cursor-pointer-6 {
-    background-image: url(../../assets/svg/roller_icon.svg); }
-
-  .value-price .value-price-6 {
-    color: #fe9013; }
-
   input[type="number"] {
     width: 185px;
     height: 44px; }
@@ -1341,8 +1332,8 @@ input[type="submit"] {
     top: -8px;
     left: -8px; }
 
-  .cursor-pointer-6 {
-    background-image: url(../../assets/svg/roller_icon-adaptive320.svg); }
+  .cursor-pointer {
+    background-size: contain; }
 
   .value-price-5 {
     margin-left: 20px; }
