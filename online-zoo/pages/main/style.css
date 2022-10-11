@@ -422,13 +422,17 @@ html {
 
 .pets-card-items {
   display: flex;
-  max-width: 1160px;
+  width: 1160px;
+  height: 872px;
   flex-wrap: wrap;
   row-gap: 20px;
-  column-gap: 30px; }
+  column-gap: 30px;
+  transition: 0.5s; }
 
 .pets-card-button-left,
 .pets-card-button-right {
+  position: relative;
+  z-index: 9;
   width: 62px;
   height: 62px;
   border-radius: 50%;
@@ -469,7 +473,8 @@ html {
   border-color: #fe9013;
   border-radius: 5px;
   overflow: hidden;
-  transition: 0.5s; }
+  transition: 0.5s;
+  opacity: 1; }
 
 .pets-card-item-1-img,
 .pets-card-item-2-img,
@@ -675,6 +680,10 @@ html {
 
 .pets-card-item-location-change-2 {
   display: none; }
+
+.pets-card-item-opacity {
+  opacity: 0;
+  transition: 0.5s; }
 
 .pick-friends-container {
   background-image: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
