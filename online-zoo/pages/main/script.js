@@ -17,7 +17,10 @@ function closeBurgerMenu() {
 
 BURGER_MENU_BUTTON_OPEN.addEventListener("click", openBurgerMenu);
 BURGER_MENU_BUTTON_CLOSE.addEventListener("click", closeBurgerMenu);
-SHADOW_BACKGROUND.addEventListener("click", closeBurgerMenu);
+SHADOW_BACKGROUND.addEventListener("click", () => {
+  closeBurgerMenu();
+  removePopupCommit();
+});
 
 //carousel pets
 
@@ -55,7 +58,6 @@ function goToLeft() {
     let arrayRandomNumberCard = shuffle(arrayNumberCard);
     PETS_CARDS.forEach((elem, index) => {
       CAROUSEL_PETS.append(PETS_CARDS[arrayRandomNumberCard[index]]);
-      console.log(arrayRandomNumberCard[index]);
       elem.classList.remove("pets-card-item-opacity");
     });
   }, 500);
@@ -78,7 +80,6 @@ function goToRight() {
     let arrayRandomNumberCard = shuffle(arrayNumberCard);
     PETS_CARDS.forEach((elem, index) => {
       CAROUSEL_PETS.append(PETS_CARDS[arrayRandomNumberCard[index]]);
-      console.log(arrayRandomNumberCard[index]);
       elem.classList.remove("pets-card-item-opacity");
     });
   }, 500);
@@ -89,5 +90,45 @@ function goToRight() {
 
 LEFT_BUTTON.addEventListener("click", goToLeft);
 RIGHT_BUTTON.addEventListener("click", goToRight);
-console.log(window.screen.width);
-console.log(PETS_CARDS);
+
+// carousel testimonials
+// const TESTIMONIALS_CARDS = document.querySelector(".testimonials-cards");
+// const COMMENTS = document.querySelectorAll(".testimonials-item");
+// const INPUT_RANGE = document.querySelector('input[type="range"]');
+
+// INPUT_RANGE.addEventListener("input", carouselComments);
+
+// function carouselComments() {
+//   if()
+// }
+
+//popup testimonials
+
+const COMMENTS = document.querySelectorAll(".testimonials-item");
+const TESTIMONIALS = document.querySelector(".testimonials");
+const ARRAY_COMMENTS = Object.assign([], Array.from(COMMENTS));
+let cloneCommit;
+const DIV = document.createElement("div");
+const DIV_CLOSE = document.createElement("div");
+DIV.className = "testimonials-popup";
+DIV_CLOSE.className = "testimonials-popup-close";
+function addPopupCommit() {
+  TESTIMONIALS.append(DIV);
+  DIV.append(DIV_CLOSE);
+}
+function removePopupCommit() {
+  DIV.remove();
+  cloneCommit.remove();
+  DIV_CLOSE.remove();
+  SHADOW_BACKGROUND.classList.remove("shadow-active");
+}
+ARRAY_COMMENTS.forEach((elem, index) => {
+  elem.addEventListener("click", () => {
+    addPopupCommit();
+    SHADOW_BACKGROUND.classList.toggle("shadow-active");
+    cloneCommit = elem.cloneNode(true);
+    DIV.append(cloneCommit);
+  });
+});
+
+DIV_CLOSE.addEventListener("click", removePopupCommit);

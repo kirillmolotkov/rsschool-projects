@@ -283,8 +283,9 @@ html {
 
 .shadow-active {
   width: 100%;
-  height: 100%;
+  height: 4975px;
   position: absolute;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.5); }
 
 .watch-online-container {
@@ -879,7 +880,8 @@ a {
   border-radius: 20px;
   background-image: linear-gradient(#f1f3f2, #f1f3f2), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   background-origin: border-box;
-  background-clip: content-box, border-box; }
+  background-clip: content-box, border-box;
+  cursor: pointer; }
 
 .testimonials-item-data-1 {
   margin-left: -5px; }
@@ -996,6 +998,27 @@ input[type="range"]::-webkit-slider-thumb {
 
 .testimonials-button:active {
   background: #4b9200; }
+
+.testimonials-popup {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  background-color: #ffffff;
+  top: calc(-50vh - 300px);
+  left: calc(50vh - 200px);
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; }
+
+.testimonials-popup-close {
+  width: 14px;
+  height: 14px;
+  background-image: url(../../assets/images/x_icon.png);
+  align-self: flex-end;
+  margin-right: 15px;
+  cursor: pointer; }
 
 .footer-container {
   background-color: #111115; }
