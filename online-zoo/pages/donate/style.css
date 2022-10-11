@@ -258,6 +258,24 @@ html {
 .burger-menu {
   display: none; }
 
+.burger-menu-open {
+  display: none; }
+
+.burger-menu-open-active {
+  display: block;
+  position: absolute;
+  height: 329px;
+  width: 100%;
+  z-index: 11;
+  background-color: #ffffff;
+  top: 0; }
+
+.shadow-active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 .donation-container {
   background-image: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%); }
 
@@ -971,6 +989,76 @@ input[type="submit"] {
     border-radius: 2px;
     background-color: #ffffff; }
 
+  .container-burger-menu {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 33px; }
+
+  .header-burger-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px; }
+
+  .burger-menu-open-logo {
+    width: 66px;
+    height: 42px;
+    border-radius: 2px;
+    border: 1px solid #fe9013; }
+
+  .burger-menu-open-logo h1 {
+    color: #fe9013; }
+
+  .burger-menu-close {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer; }
+
+  .burger-menu-close-line {
+    height: 2px;
+    width: 34px;
+    border-radius: 1px;
+    background-color: #fe9013; }
+
+  .burger-menu-close-line:nth-child(1) {
+    transform: rotateZ(45deg) translateY(1px) translateX(1px); }
+
+  .burger-menu-close-line:nth-child(2) {
+    transform: rotateZ(-45deg); }
+
+  .burger-menu-open-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; }
+
+  .burger-menu-open-nav a {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333b41;
+    text-decoration: none;
+    transition: 0.3s; }
+
+  .burger-menu-open-nav a:hover {
+    color: #fe9013; }
+
+  .burger-menu-open-nav li {
+    list-style: none; }
+
+  .shadow-active {
+    height: 1948px;
+    z-index: 10; }
+
   .panda {
     height: 335px;
     background-image: url(../../assets/images/panda_bg-page-donate-adaptive-640px.jpg); }
@@ -1144,6 +1232,12 @@ input[type="submit"] {
   .header {
     max-width: 320px;
     padding: 0 10px; }
+
+  .shadow-active {
+    height: 1668px; }
+
+  .container-burger-menu {
+    max-width: 300px; }
 
   .panda {
     height: 187px;
