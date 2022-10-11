@@ -92,21 +92,23 @@ LEFT_BUTTON.addEventListener("click", goToLeft);
 RIGHT_BUTTON.addEventListener("click", goToRight);
 
 // carousel testimonials
-// const TESTIMONIALS_CARDS = document.querySelector(".testimonials-cards");
-// const COMMENTS = document.querySelectorAll(".testimonials-item");
-// const INPUT_RANGE = document.querySelector('input[type="range"]');
+const TESTIMONIALS_CARDS = document.querySelector(".testimonials-cards");
+const COMMENTS = document.querySelectorAll(".testimonials-item");
+const INPUT_RANGE = document.querySelector('input[type="range"]');
+const ARRAY_COMMENTS = Object.assign([], Array.from(COMMENTS));
 
-// INPUT_RANGE.addEventListener("input", carouselComments);
-
-// function carouselComments() {
-//   if()
-// }
-
+INPUT_RANGE.addEventListener("input", () => {
+  for (let i = 0; i < 12; i++) {
+    if (i == INPUT_RANGE.value) {
+      ARRAY_COMMENTS[i].style.display = "none";
+      ARRAY_COMMENTS[i + 3].style.display = "block";
+    }
+  }
+});
 //popup testimonials
 
-const COMMENTS = document.querySelectorAll(".testimonials-item");
 const TESTIMONIALS = document.querySelector(".testimonials");
-const ARRAY_COMMENTS = Object.assign([], Array.from(COMMENTS));
+
 let cloneCommit;
 const DIV = document.createElement("div");
 const DIV_CLOSE = document.createElement("div");
