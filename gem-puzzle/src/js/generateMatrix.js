@@ -1,4 +1,4 @@
-import { arrayButtonGame } from "./addElement";
+import { arrayButtonGame, arrayButtonGameValue } from "./addElement";
 
 function getMatrix4x4(array) {
   const matrix = [[], [], [], []];
@@ -10,12 +10,19 @@ function getMatrix4x4(array) {
       y++;
       x = 0;
     }
-    matrix[y][x] = Number(array[i].textContent);
+    matrix[y][x] = array[i];
     x++;
   }
   return matrix;
 }
 
-let matrix = getMatrix4x4(arrayButtonGame);
-
-export { matrix };
+let objMatrix = {
+  matrix: getMatrix4x4(arrayButtonGameValue),
+  get valueMatrix() {
+    return this.valueMatrix;
+  },
+  set valueMatrix(value) {
+    this.matrix = value;
+  },
+};
+export { getMatrix4x4, objMatrix };

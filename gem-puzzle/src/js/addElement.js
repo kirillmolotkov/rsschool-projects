@@ -15,11 +15,13 @@ blockInfo.className = "block-info";
 container.append(blockInfo);
 
 const arrayButtonGame = [];
+const arrayButtonGameValue = [];
 for (let i = 1; i < 17; i++) {
   const buttonGame = document.createElement("div");
   buttonGame.className = "button-game";
   buttonGame.innerHTML = `${i}`;
   arrayButtonGame.push(buttonGame);
+  arrayButtonGameValue.push(Number(buttonGame.textContent));
   blockGame.append(buttonGame);
 }
 
@@ -34,5 +36,6 @@ export {
   blockGame,
   blockInfo,
   arrayButtonGame,
+  arrayButtonGameValue,
   buttonShuffle,
 };
