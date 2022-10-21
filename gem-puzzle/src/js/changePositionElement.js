@@ -59,3 +59,4 @@ function swap(coords_1, coords_2, matrix) {
     console.log("You Won");
   }
 }
+export { voidButtonNumber, findCoordinatesByNumber, isValidForSwap, swap };
