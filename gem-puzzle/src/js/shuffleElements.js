@@ -8,26 +8,10 @@ import {
 import { getMatrix4x4, objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 
-// buttonShuffle.addEventListener("click", () => {
-//   const shuffledArray = shuffleArray(objMatrix.matrix.flat());
-
-//   objMatrix.valueMatrix = getMatrix4x4(shuffledArray);
-
-//   setPositionElements(objMatrix.matrix);
-// });
-
-// function shuffleArray(array) {
-//   return array
-//     .map((value) => ({ value, sort: Math.random() }))
-//     .sort((a, b) => a.sort - b.sort)
-//     .map(({ value }) => value);
-// }
 const maxShuffleCount = 100;
 let timer;
 
 buttonShuffle.addEventListener("click", () => {
-  // randomSwap(objMatrix.matrix);
-  // setPositionElements(objMatrix.matrix);
   let shuffleCounter = 0;
   clearInterval(timer);
 
@@ -79,3 +63,5 @@ function findValidCoords(voidCoords, matrix, blockedCoords) {
   }
   return validCoords;
 }
+
+export { blockedCoords };

@@ -30,6 +30,11 @@ buttonShuffle.className = "button-shuffle";
 buttonShuffle.innerHTML = "Shuffle";
 blockSettings.append(buttonShuffle);
 
+const buttonReset = document.createElement("div");
+buttonReset.className = "button-reset";
+buttonReset.innerHTML = "Reset";
+blockSettings.append(buttonReset);
+
 export {
   container,
   blockSettings,
@@ -38,4 +43,5 @@ export {
   arrayButtonGame,
   arrayButtonGameValue,
   buttonShuffle,
+  buttonReset,
 };
