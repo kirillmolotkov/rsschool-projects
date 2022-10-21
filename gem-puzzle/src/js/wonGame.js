@@ -1,5 +1,6 @@
 import { arrayButtonGame, timeGame } from "./addElement";
 import { counterMoves } from "./changePositionElement";
+import { minutes, seconds } from "./infoPanels";
 
 import { isTimerStart, timer } from "./settingsPanel";
 
@@ -19,6 +20,8 @@ function isWon(matrix) {
     isTimerStart.isTimer = false;
   }
   timeGame.innerHTML = "0:00";
+  minutes.currentMinute = 0;
+  seconds.currentSecond = 0;
   return true;
 }
 

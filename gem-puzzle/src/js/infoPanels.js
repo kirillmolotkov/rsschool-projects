@@ -1,34 +1,41 @@
 import { timeGame } from "./addElement";
 
-let minutes = 0;
-let seconds = 0;
+let minutes = {
+  minutes: 0,
+  get currentMinute() {
+    return this.minutes;
+  },
+  set currentMinute(value) {
+    this.minutes = value;
+  },
+};
+let seconds = {
+  seconds: 0,
+  get currentSecond() {
+    return this.seconds;
+  },
+  set currentSecond(value) {
+    this.seconds = value;
+  },
+};
 
 function timesGame() {
   let time = "";
-  if (seconds < 59) {
-    seconds++;
-    if (seconds < 10) {
-      time = `${minutes}:0${seconds}`;
+  if (seconds.seconds < 59) {
+    seconds.seconds++;
+    if (seconds.seconds < 10) {
+      time = `${minutes.minutes}:0${seconds.seconds}`;
     }
-    if (seconds > 9) {
-      time = `${minutes}:${seconds}`;
+    if (seconds.seconds > 9) {
+      time = `${minutes.minutes}:${seconds.seconds}`;
     }
   } else {
-    seconds = 0;
-    minutes++;
-    time = `${minutes}:00`;
+    seconds.currentSecond = 0;
+    minutes.minutes++;
+    time = `${minutes.minutes}:00`;
   }
   timeGame.innerHTML = time;
   return time;
 }
 
-// let timer = {
-//   time: 0,
-//   get valueTime() {
-//     return this.time;
-//   },
-//   set valueTime(value) {
-//     this.time;
-//   },
-// };
-export { timesGame };
+export { timesGame, minutes, seconds };

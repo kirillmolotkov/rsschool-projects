@@ -7,7 +7,7 @@ import {
 } from "./addElement";
 import { counterMoves } from "./changePositionElement";
 import { getMatrix4x4, objMatrix } from "./generateMatrix";
-import { timesGame } from "./infoPanels";
+import { minutes, seconds, timesGame } from "./infoPanels";
 import { setPositionElements } from "./positionElements";
 
 buttonReset.addEventListener("click", () => {
@@ -21,6 +21,8 @@ buttonReset.addEventListener("click", () => {
     clearInterval(timer.timer);
     isTimerStart.isTimer = false;
   }
+  minutes.currentMinute = 0;
+  seconds.seconds = 0;
   timeGame.innerHTML = "0:00";
 });
 let timer = {
