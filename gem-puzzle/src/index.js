@@ -7,3 +7,4 @@ import "./js/shuffleElements.js";
 import "./js/changePositionElement.js";
 import "./js/wonGame.js";
 import "./js/settingsPanel.js";
+import "./js/infoPanels.js";

@@ -1,8 +1,16 @@
-import { arrayButtonGame, blockGame } from "./addElement";
+import { arrayButtonGame, blockGame, movesCounter } from "./addElement";
 import { objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 import { isWon } from "./wonGame";
-
+let counterMoves = {
+  moves: 0,
+  get itemNumber() {
+    return this.moves;
+  },
+  set itemNumber(value) {
+    this.moves = value;
+  },
+};
 let voidButtonNumber = 16;
 blockGame.addEventListener("click", (event) => {
   const button = event.target;
@@ -26,6 +34,8 @@ blockGame.addEventListener("click", (event) => {
   if (isValid) {
     swap(buttonCoords, voidButtonCoords, objMatrix.matrix);
     setPositionElements(objMatrix.matrix);
+    counterMoves.moves++;
+    movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
   }
 });
 
@@ -59,4 +69,10 @@ function swap(coords_1, coords_2, matrix) {
     console.log("You Won");
   }
 }
-export { voidButtonNumber, findCoordinatesByNumber, isValidForSwap, swap };
+export {
+  voidButtonNumber,
+  findCoordinatesByNumber,
+  isValidForSwap,
+  swap,
+  counterMoves,
+};

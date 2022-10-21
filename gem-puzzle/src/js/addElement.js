@@ -35,6 +35,16 @@ buttonReset.className = "button-reset";
 buttonReset.innerHTML = "Reset";
 blockSettings.append(buttonReset);
 
+const movesCounter = document.createElement("div");
+movesCounter.className = "moves-counter";
+movesCounter.innerHTML = "Moves: 0";
+blockInfo.append(movesCounter);
+
+const timeGame = document.createElement("div");
+timeGame.classList = "time-game";
+timeGame.innerHTML = "0:00";
+blockInfo.append(timeGame);
+
 export {
   container,
   blockSettings,
@@ -44,4 +54,6 @@ export {
   arrayButtonGameValue,
   buttonShuffle,
   buttonReset,
+  movesCounter,
+  timeGame,
 };

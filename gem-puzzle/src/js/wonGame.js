@@ -1,4 +1,8 @@
-import { arrayButtonGame } from "./addElement";
+import { arrayButtonGame, timeGame } from "./addElement";
+import { counterMoves } from "./changePositionElement";
+
+import { isTimerStart, timer } from "./settingsPanel";
+
 const winArray = arrayButtonGame.map((elem) => {
   return Number(elem.textContent);
 });
@@ -9,6 +13,12 @@ function isWon(matrix) {
       return false;
     }
   }
+  counterMoves.itemNumber = -1;
+  if (isTimerStart) {
+    clearInterval(timer.timer);
+    isTimerStart.isTimer = false;
+  }
+  timeGame.innerHTML = "0:00";
   return true;
 }
 
