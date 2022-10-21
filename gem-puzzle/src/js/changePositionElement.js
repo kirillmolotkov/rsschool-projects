@@ -1,6 +1,7 @@
 import { arrayButtonGame, blockGame } from "./addElement";
 import { objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
+import { isWon } from "./wonGame";
 
 let voidButtonNumber = 16;
 blockGame.addEventListener("click", (event) => {
@@ -54,4 +55,7 @@ function swap(coords_1, coords_2, matrix) {
   const coords1Number = matrix[coords_1.y][coords_1.x];
   matrix[coords_1.y][coords_1.x] = matrix[coords_2.y][coords_2.x];
   matrix[coords_2.y][coords_2.x] = coords1Number;
+  if (isWon(objMatrix.matrix)) {
+    console.log("You Won");
+  }
 }
