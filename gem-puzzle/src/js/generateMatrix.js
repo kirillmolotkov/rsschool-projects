@@ -15,7 +15,7 @@ function getMatrix4x4(array) {
   }
   return matrix;
 }
-
+// getter and setter
 let objMatrix = {
   matrix: getMatrix4x4(arrayButtonGameValue),
   get valueMatrix() {
