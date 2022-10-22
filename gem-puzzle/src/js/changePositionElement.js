@@ -3,7 +3,7 @@ import { objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 import { isWon } from "./wonGame";
 let counterMoves = {
-  moves: 0,
+  moves: Number(localStorage.getItem("move")),
   get itemNumber() {
     return this.moves;
   },
@@ -11,6 +11,9 @@ let counterMoves = {
     this.moves = value;
   },
 };
+
+movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
+
 let voidButtonNumber = 16;
 blockGame.addEventListener("click", (event) => {
   const button = event.target;
@@ -33,9 +36,12 @@ blockGame.addEventListener("click", (event) => {
   const isValid = isValidForSwap(buttonCoords, voidButtonCoords);
   if (isValid) {
     swap(buttonCoords, voidButtonCoords, objMatrix.matrix);
+    localStorage.setItem("saveMatrix", objMatrix.matrix);
     setPositionElements(objMatrix.matrix);
     counterMoves.moves++;
     movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
+    localStorage.setItem("move", counterMoves.moves);
+    // console.log(localStorage.getItem("saveMatrix"));
   }
 });
 

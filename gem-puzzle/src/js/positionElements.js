@@ -1,5 +1,5 @@
 import { arrayButtonGame, arrayButtonGameValue } from "./addElement";
-import { objMatrix } from "./generateMatrix";
+import { getMatrix4x4, objMatrix } from "./generateMatrix";
 
 function setPositionElements(matrix) {
   for (let x = 0; x < matrix.length; x++) {

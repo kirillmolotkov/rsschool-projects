@@ -15,9 +15,28 @@ function getMatrix4x4(array) {
   }
   return matrix;
 }
+let isFirstOpenPage = localStorage.length === 0;
+
+function writeDataLocalStorage() {
+  if (isFirstOpenPage) {
+    localStorage.setItem("time", "0:00");
+    localStorage.setItem("move", 0);
+    localStorage.setItem("seconds", 0);
+    localStorage.setItem("minutes", 0);
+    localStorage.setItem("saveMatrix", arrayButtonGameValue);
+  }
+}
+
+writeDataLocalStorage();
+
+let matrixForLocalStorage = localStorage
+  .getItem("saveMatrix")
+  .split(",")
+  .map((elem) => Number(elem));
+
 // getter and setter
 let objMatrix = {
-  matrix: getMatrix4x4(arrayButtonGameValue),
+  matrix: getMatrix4x4(matrixForLocalStorage),
   get valueMatrix() {
     return this.valueMatrix;
   },

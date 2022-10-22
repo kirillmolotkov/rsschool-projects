@@ -24,7 +24,11 @@ buttonReset.addEventListener("click", () => {
   minutes.currentMinute = 0;
   seconds.seconds = 0;
   timeGame.innerHTML = "0:00";
+  localStorage.setItem("time", "0:00");
+  localStorage.setItem("move", 0);
+  localStorage.setItem("saveMatrix", objMatrix.matrix);
 });
+
 let timer = {
   timer: null,
   get timeStart() {

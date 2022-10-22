@@ -1,7 +1,7 @@
 import { timeGame } from "./addElement";
 
 let minutes = {
-  minutes: 0,
+  minutes: Number(localStorage.getItem("minutes")),
   get currentMinute() {
     return this.minutes;
   },
@@ -9,8 +9,9 @@ let minutes = {
     this.minutes = value;
   },
 };
+
 let seconds = {
-  seconds: 0,
+  seconds: Number(localStorage.getItem("seconds")),
   get currentSecond() {
     return this.seconds;
   },
@@ -19,23 +20,37 @@ let seconds = {
   },
 };
 
+let time = {
+  time: localStorage.getItem("time"),
+  get valueTime() {
+    return this.time;
+  },
+  set valueTime(value) {
+    this.time = value;
+  },
+};
+
+timeGame.innerHTML = time.time;
+
 function timesGame() {
-  let time = "";
   if (seconds.seconds < 59) {
     seconds.seconds++;
     if (seconds.seconds < 10) {
-      time = `${minutes.minutes}:0${seconds.seconds}`;
+      time.valueTime = `${minutes.minutes}:0${seconds.seconds}`;
     }
     if (seconds.seconds > 9) {
-      time = `${minutes.minutes}:${seconds.seconds}`;
+      time.valueTime = `${minutes.minutes}:${seconds.seconds}`;
     }
   } else {
     seconds.currentSecond = 0;
     minutes.minutes++;
-    time = `${minutes.minutes}:00`;
+    time.valueTime = `${minutes.minutes}:00`;
   }
-  timeGame.innerHTML = time;
-  return time;
+  localStorage.setItem("time", time.time);
+  localStorage.setItem("seconds", seconds.seconds);
+  localStorage.setItem("minutes", minutes.minutes);
+  timeGame.innerHTML = time.time;
+  return time.time;
 }
 
 export { timesGame, minutes, seconds };
