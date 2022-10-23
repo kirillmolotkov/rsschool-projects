@@ -8,7 +8,16 @@ import {
 import { getMatrix4x4, objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 
-const maxShuffleCount = 100;
+let maxShuffleCount = {
+  count: Number(localStorage.getItem("defaultSize")) * 20,
+  get sizeCount() {
+    return this.count;
+  },
+  set sizeCount(value) {
+    this.count = value;
+  },
+};
+
 let timer;
 
 buttonShuffle.addEventListener("click", () => {
@@ -22,7 +31,7 @@ buttonShuffle.addEventListener("click", () => {
 
       shuffleCounter += 1;
 
-      if (shuffleCounter >= maxShuffleCount) {
+      if (shuffleCounter >= maxShuffleCount.count) {
         clearInterval(timer);
       }
     }, 50);
@@ -64,4 +73,4 @@ function findValidCoords(voidCoords, matrix, blockedCoords) {
   return validCoords;
 }
 
-export { blockedCoords };
+export { blockedCoords, maxShuffleCount };

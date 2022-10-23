@@ -15,6 +15,7 @@ import { counterMoves, voidButtonNumber } from "./changePositionElement";
 import { getMatrix4x4, objMatrix } from "./generateMatrix";
 import { minutes, seconds, timesGame } from "./infoPanels";
 import { setPositionElements } from "./positionElements";
+import { maxShuffleCount } from "./shuffleElements";
 
 buttonReset.addEventListener("click", resetGame);
 
@@ -104,6 +105,7 @@ blockSizeGame.addEventListener("click", (event) => {
   resetGame();
   styleButtonGame(arrayButtonGame.item);
   checked(button);
+  maxShuffleCount.sizeCount = Number(localStorage.getItem("defaultSize")) * 20;
 });
 
 function checked(button) {
