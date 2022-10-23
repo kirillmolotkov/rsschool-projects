@@ -1,5 +1,6 @@
 import "./index.html";
 import "./index.scss";
+import "./sound.mp3";
 import "./js/addElement.js";
 import "./js/generateMatrix";
 import "./js/positionElements.js";
@@ -8,3 +9,4 @@ import "./js/changePositionElement.js";
 import "./js/wonGame.js";
 import "./js/settingsPanel.js";
 import "./js/infoPanels.js";
+import "./js/audio.js";

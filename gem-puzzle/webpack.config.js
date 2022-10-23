@@ -39,6 +39,10 @@ module.exports = {
         loader: "html-loader",
       },
       {
+        test: /\.mp3$/i,
+        loader: "file-loader",
+      },
+      {
         test: /\.(c|sa|sc)ss$/i,
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,

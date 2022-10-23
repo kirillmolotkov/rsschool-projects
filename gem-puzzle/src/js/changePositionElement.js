@@ -1,4 +1,5 @@
 import { blockGame, movesCounter, sizeValueGame } from "./addElement";
+import { soundStart } from "./audio";
 import { objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 import { isWon } from "./wonGame";
@@ -52,6 +53,7 @@ blockGame.addEventListener("click", (event) => {
     counterMoves.moves++;
     movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
     localStorage.setItem("move", counterMoves.moves);
+    soundStart();
   }
 });
 

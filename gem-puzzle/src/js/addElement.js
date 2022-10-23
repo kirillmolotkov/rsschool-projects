@@ -113,6 +113,16 @@ for (let i = 0; i < 6; i++) {
   arrayButtonSizeValue.push(i + 3);
   blockSizeGame.append(buttonSize);
 }
+
+const audioGame = document.createElement("audio");
+audioGame.setAttribute("src", "./audio.mp3");
+audioGame.classList = "audio-game";
+blockInfo.append(audioGame);
+
+const buttonAudio = document.createElement("div");
+buttonAudio.classList = "button-audio";
+buttonAudio.innerHTML = "Off";
+blockSettings.append(buttonAudio);
 export {
   container,
   blockSettings,
@@ -130,4 +140,6 @@ export {
   createGameElement,
   sizeValueGame,
   styleButtonGame,
+  audioGame,
+  buttonAudio,
 };
