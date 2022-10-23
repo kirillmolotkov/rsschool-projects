@@ -1,20 +1,28 @@
 import { arrayButtonGame, arrayButtonGameValue } from "./addElement";
 
 function getMatrix4x4(array) {
-  const matrix = [[], [], [], []];
-  let x = 0;
-  let y = 0;
+  let valueSizeMatrix = Number(localStorage.getItem("defaultSize"));
+  let counterIteration = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    if (x >= 4) {
-      y++;
-      x = 0;
+  let matrix = [];
+  let arrayForMatrix = [];
+
+  array.forEach((elem) => {
+    if (counterIteration < valueSizeMatrix) {
+      arrayForMatrix.push(elem);
+
+      counterIteration++;
     }
-    matrix[y][x] = array[i];
-    x++;
-  }
+    if (counterIteration === valueSizeMatrix) {
+      counterIteration = 0;
+      matrix.push(arrayForMatrix);
+      arrayForMatrix = [];
+    }
+  });
+
   return matrix;
 }
+
 let isFirstOpenPage = localStorage.length === 0;
 
 function writeDataLocalStorage() {
@@ -23,7 +31,8 @@ function writeDataLocalStorage() {
     localStorage.setItem("move", 0);
     localStorage.setItem("seconds", 0);
     localStorage.setItem("minutes", 0);
-    localStorage.setItem("saveMatrix", arrayButtonGameValue);
+    localStorage.setItem("saveMatrix", arrayButtonGameValue.item);
+    localStorage.setItem("defaultSize", 4);
   }
 }
 
@@ -44,4 +53,5 @@ let objMatrix = {
     this.matrix = value;
   },
 };
+
 export { getMatrix4x4, objMatrix };

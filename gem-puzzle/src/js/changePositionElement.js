@@ -1,4 +1,4 @@
-import { arrayButtonGame, blockGame, movesCounter } from "./addElement";
+import { blockGame, movesCounter, sizeValueGame } from "./addElement";
 import { objMatrix } from "./generateMatrix";
 import { setPositionElements } from "./positionElements";
 import { isWon } from "./wonGame";
@@ -14,7 +14,16 @@ let counterMoves = {
 
 movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
 
-let voidButtonNumber = 16;
+let voidButtonNumber = {
+  size: sizeValueGame.current,
+  get current() {
+    return this.size;
+  },
+  set current(value) {
+    this.size = value;
+  },
+};
+
 blockGame.addEventListener("click", (event) => {
   const button = event.target;
 
@@ -30,10 +39,12 @@ blockGame.addEventListener("click", (event) => {
 
   const buttonCoords = findCoordinatesByNumber(buttonNumber, objMatrix.matrix);
   const voidButtonCoords = findCoordinatesByNumber(
-    voidButtonNumber,
+    voidButtonNumber.current,
     objMatrix.matrix
   );
+
   const isValid = isValidForSwap(buttonCoords, voidButtonCoords);
+
   if (isValid) {
     swap(buttonCoords, voidButtonCoords, objMatrix.matrix);
     localStorage.setItem("saveMatrix", objMatrix.matrix);
@@ -41,7 +52,6 @@ blockGame.addEventListener("click", (event) => {
     counterMoves.moves++;
     movesCounter.innerHTML = `Moves: ${counterMoves.moves}`;
     localStorage.setItem("move", counterMoves.moves);
-    // console.log(localStorage.getItem("saveMatrix"));
   }
 });
 
@@ -71,6 +81,7 @@ function swap(coords_1, coords_2, matrix) {
   const coords1Number = matrix[coords_1.y][coords_1.x];
   matrix[coords_1.y][coords_1.x] = matrix[coords_2.y][coords_2.x];
   matrix[coords_2.y][coords_2.x] = coords1Number;
+
   if (isWon(objMatrix.matrix)) {
     console.log("You Won");
   }

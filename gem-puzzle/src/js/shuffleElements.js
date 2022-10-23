@@ -33,7 +33,7 @@ let blockedCoords = null;
 
 function randomSwap(matrix) {
   const voidButtonCoords = findCoordinatesByNumber(
-    voidButtonNumber,
+    voidButtonNumber.current,
     objMatrix.matrix
   );
 

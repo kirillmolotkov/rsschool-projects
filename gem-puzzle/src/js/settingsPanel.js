@@ -1,17 +1,25 @@
 import {
+  arrayButtonGame,
   arrayButtonGameValue,
+  arrayButtonSize,
   blockGame,
+  blockSizeGame,
   buttonReset,
+  createGameElement,
   movesCounter,
+  sizeValueGame,
+  styleButtonGame,
   timeGame,
 } from "./addElement";
-import { counterMoves } from "./changePositionElement";
+import { counterMoves, voidButtonNumber } from "./changePositionElement";
 import { getMatrix4x4, objMatrix } from "./generateMatrix";
 import { minutes, seconds, timesGame } from "./infoPanels";
 import { setPositionElements } from "./positionElements";
 
-buttonReset.addEventListener("click", () => {
-  const resetMatrix = getMatrix4x4(arrayButtonGameValue);
+buttonReset.addEventListener("click", resetGame);
+
+function resetGame() {
+  const resetMatrix = getMatrix4x4(arrayButtonGameValue.item);
   setPositionElements(resetMatrix);
   objMatrix.valueMatrix = resetMatrix;
 
@@ -27,7 +35,7 @@ buttonReset.addEventListener("click", () => {
   localStorage.setItem("time", "0:00");
   localStorage.setItem("move", 0);
   localStorage.setItem("saveMatrix", objMatrix.matrix);
-});
+}
 
 let timer = {
   timer: null,
@@ -59,5 +67,52 @@ blockGame.addEventListener("click", (event) => {
     }
   }
 });
+
+arrayButtonSize.forEach((elem) => {
+  if (elem.textContent[0] === localStorage.getItem("defaultSize")) {
+    elem.classList.add("button-size-active");
+  }
+});
+
+blockSizeGame.addEventListener("click", (event) => {
+  const button = event.target;
+  localStorage.setItem("defaultSize", button.textContent[0]);
+
+  arrayButtonGame.node.forEach((elem) => {
+    elem.remove();
+  });
+  voidButtonNumber.size = Number(
+    localStorage.getItem("defaultSize") *
+      Number(localStorage.getItem("defaultSize"))
+  );
+  arrayButtonGame.node = [];
+
+  sizeValueGame.current =
+    Number(localStorage.getItem("defaultSize")) *
+    Number(localStorage.getItem("defaultSize"));
+  arrayButtonGameValue.item = [];
+  createGameElement(sizeValueGame.current);
+
+  localStorage.setItem("saveMatrix", getMatrix4x4(arrayButtonGameValue.item));
+  objMatrix.valueMatrix = getMatrix4x4(arrayButtonGameValue.item);
+  setPositionElements(getMatrix4x4(arrayButtonGameValue.item));
+
+  arrayButtonGame.node[
+    getMatrix4x4(arrayButtonGameValue.item).flat().length - 1
+  ].style.display = "none";
+
+  resetGame();
+  styleButtonGame(arrayButtonGame.item);
+  checked(button);
+});
+
+function checked(button) {
+  arrayButtonSize.forEach((elem) => {
+    if (elem.classList[1]) {
+      elem.classList.remove("button-size-active");
+    }
+  });
+  button.classList.add("button-size-active");
+}
 
 export { isTimerStart, timer };
