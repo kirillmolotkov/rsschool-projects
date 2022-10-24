@@ -23,7 +23,7 @@ function getMatrix4x4(array) {
   return matrix;
 }
 
-let isFirstOpenPage = localStorage.length === 0;
+let isFirstOpenPage = localStorage.length < 3;
 
 function writeDataLocalStorage() {
   if (isFirstOpenPage) {
