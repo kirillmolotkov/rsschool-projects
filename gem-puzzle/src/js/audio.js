@@ -1,6 +1,6 @@
 import { buttonAudio } from "./addElement";
 
-let isAudio = true;
+let isAudio = false;
 buttonAudio.addEventListener("click", () => {
   if (!isAudio) {
     isAudio = true;
@@ -9,7 +9,6 @@ buttonAudio.addEventListener("click", () => {
     isAudio = false;
     buttonAudio.innerHTML = "Off";
   }
-  console.log(isAudio);
 });
 
 function soundStart() {

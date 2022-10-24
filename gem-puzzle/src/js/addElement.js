@@ -123,6 +123,7 @@ const buttonAudio = document.createElement("div");
 buttonAudio.classList = "button-audio";
 buttonAudio.innerHTML = "Off";
 blockSettings.append(buttonAudio);
+
 export {
   container,
   blockSettings,

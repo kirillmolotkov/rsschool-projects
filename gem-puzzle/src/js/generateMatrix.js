@@ -35,9 +35,7 @@ function writeDataLocalStorage() {
     localStorage.setItem("defaultSize", 4);
   }
 }
-
 writeDataLocalStorage();
-
 let matrixForLocalStorage = localStorage
   .getItem("saveMatrix")
   .split(",")

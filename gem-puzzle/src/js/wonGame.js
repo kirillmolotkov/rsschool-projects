@@ -17,10 +17,9 @@ function isWon(matrix) {
     }
   }
 
-  console.log(
-    `Moves: ${counterMoves.itemNumber}, Time: ${localStorage.getItem("time")}`
-  );
+  saveScoreGame();
 
+  getSaveScoreGame();
   counterMoves.itemNumber = -1;
   if (isTimerStart) {
     clearInterval(timer.timer);
@@ -34,5 +33,26 @@ function isWon(matrix) {
 
   return true;
 }
+localStorage.setItem("counterGame", 0);
+let counterGame = Number(localStorage.getItem("counterGame"));
+function saveScoreGame() {
+  counterGame++;
+  console.log(counterGame);
+  let sizeGame = localStorage.getItem("defaultSize");
+  let moves = counterMoves.itemNumber;
+  let time = localStorage.getItem("time");
+  let currentScore = `Size game: ${sizeGame}x${sizeGame} Moves: ${moves} Time: ${time}`;
 
-export { isWon };
+  localStorage.setItem(`score${counterGame}`, currentScore);
+}
+
+function getSaveScoreGame() {
+  let saveScore = [];
+  for (let i = 0; i < 11; i++) {
+    saveScore.push(localStorage.getItem(`score${i}`));
+  }
+
+  return saveScore;
+}
+
+export { isWon, getSaveScoreGame };

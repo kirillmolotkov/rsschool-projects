@@ -10,3 +10,4 @@ import "./js/wonGame.js";
 import "./js/settingsPanel.js";
 import "./js/infoPanels.js";
 import "./js/audio.js";
+import "./js/scoreGame.js";
