@@ -1,4 +1,4 @@
-import { arrayButtonGame, timeGame } from "./addElement";
+import { arrayButtonGame, timeGame, wonMessage } from "./addElement";
 import { counterMoves } from "./changePositionElement";
 import { objMatrix } from "./generateMatrix";
 import { minutes, seconds } from "./infoPanels";
@@ -17,9 +17,17 @@ function isWon(matrix) {
     }
   }
 
-  saveScoreGame();
-
   getSaveScoreGame();
+
+  wonMessage.classList.add("won-message-active");
+
+  wonMessage.textContent = "You won!!!";
+  setTimeout(() => {
+    wonMessage.textContent = saveScoreGame();
+  }, 1500);
+  setTimeout(() => {
+    wonMessage.classList.remove("won-message-active");
+  }, 3000);
   counterMoves.itemNumber = -1;
   if (isTimerStart) {
     clearInterval(timer.timer);
@@ -37,13 +45,14 @@ localStorage.setItem("counterGame", 0);
 let counterGame = Number(localStorage.getItem("counterGame"));
 function saveScoreGame() {
   counterGame++;
-  console.log(counterGame);
+
   let sizeGame = localStorage.getItem("defaultSize");
   let moves = counterMoves.itemNumber;
   let time = localStorage.getItem("time");
   let currentScore = `Size game: ${sizeGame}x${sizeGame} Moves: ${moves} Time: ${time}`;
 
   localStorage.setItem(`score${counterGame}`, currentScore);
+  return currentScore;
 }
 
 function getSaveScoreGame() {

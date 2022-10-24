@@ -124,6 +124,10 @@ buttonAudio.classList = "button-audio";
 buttonAudio.innerHTML = "Off";
 blockSettings.append(buttonAudio);
 
+const wonMessage = document.createElement("div");
+wonMessage.classList = "won-message";
+blockGame.append(wonMessage);
+
 export {
   container,
   blockSettings,
@@ -143,4 +147,5 @@ export {
   styleButtonGame,
   audioGame,
   buttonAudio,
+  wonMessage,
 };
