@@ -17,7 +17,6 @@ setTimeout(() => {
 
 buttonScore.addEventListener("click", () => {
   openScore();
-  console.log(isOpenScore);
 });
 
 function openScore() {
@@ -39,6 +38,5 @@ function openScore() {
     scoreTable.innerHTML = "";
     scoreTable.insertAdjacentHTML("afterbegin", score);
   }
-  console.log(score);
 }
 openScore();
