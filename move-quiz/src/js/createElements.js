@@ -62,3 +62,30 @@ const settingsTheme = document.createElement('div');
 settingsTheme.className = 'settings-theme';
 settingsTheme.innerHTML = 'dark';
 settings.append(settingsTheme);
+
+//elements for footer
+
+const gitHubLink = document.createElement('a');
+gitHubLink.className = 'git-hub-link';
+gitHubLink.setAttribute('href', 'https://github.com/kirillmolotkov');
+gitHubLink.setAttribute('target', '_blank');
+footer.append(gitHubLink);
+
+const gitHubLogo = document.createElement('div');
+gitHubLogo.className = 'git-hub-logo';
+gitHubLink.append(gitHubLogo);
+
+const currentDate = document.createElement('div');
+currentDate.className = 'current-date';
+currentDate.innerHTML = '2022';
+footer.append(currentDate);
+
+const rollingScopeSchoolLink = document.createElement('a');
+rollingScopeSchoolLink.className = 'rss-link';
+rollingScopeSchoolLink.setAttribute('href', 'https://rs.school/js/');
+rollingScopeSchoolLink.setAttribute('target', '_blank');
+footer.append(rollingScopeSchoolLink);
+
+const rollingScopeSchoolLogo = document.createElement('div');
+rollingScopeSchoolLogo.className = 'rss-logo';
+rollingScopeSchoolLink.append(rollingScopeSchoolLogo);
