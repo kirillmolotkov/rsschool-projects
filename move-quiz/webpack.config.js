@@ -19,7 +19,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: 'index.[contenthash].js',
+    filename: '[name].js',
     assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
@@ -27,7 +27,7 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: '[name].css',
     }),
   ],
   module: {
@@ -45,7 +45,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff2?$/,
+        test: /\.ttf$/,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
