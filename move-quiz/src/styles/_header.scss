@@ -1,0 +1,43 @@
+.header {
+  max-width: 1440px;
+  height: 10vh;
+  background-color: $feldgrau;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  @include roboto-bold;
+  padding-left: 20px;
+  font-size: 3rem;
+  color: $lemon-chiffon;
+  cursor: pointer;
+}
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 65px;
+}
+.nav-list-item {
+  @include roboto-regular;
+  color: $persian-orange;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.settings {
+  display: flex;
+  gap: 10px;
+  padding-right: 20px;
+  @include roboto-regular;
+  color: $persian-orange;
+  font-size: 1.3rem;
+}
+.settings-lang,
+.settings-theme {
+  cursor: pointer;
+}
