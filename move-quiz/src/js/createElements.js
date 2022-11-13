@@ -29,10 +29,10 @@ const navList = document.createElement('ul');
 navList.className = 'nav-list';
 nav.append(navList);
 
-const navListElemStart = document.createElement('li');
-navListElemStart.className = 'nav-list-item';
-navListElemStart.innerHTML = 'Start';
-navList.append(navListElemStart);
+const navListElemAbout = document.createElement('li');
+navListElemAbout.className = 'nav-list-item active-tab';
+navListElemAbout.innerHTML = 'About';
+navList.append(navListElemAbout);
 
 const navListElemQuiz = document.createElement('li');
 navListElemQuiz.className = 'nav-list-item';
@@ -89,3 +89,5 @@ footer.append(rollingScopeSchoolLink);
 const rollingScopeSchoolLogo = document.createElement('div');
 rollingScopeSchoolLogo.className = 'rss-logo';
 rollingScopeSchoolLink.append(rollingScopeSchoolLogo);
+
+export { main, nav };
