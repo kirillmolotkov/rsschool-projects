@@ -7,7 +7,16 @@
 
 .steps-questions {
   grid-column: span 6;
+  display: flex;
+  justify-content: space-around;
   background-color: aqua;
+}
+
+.steps-questions__element {
+  align-self: center;
+  @include roboto-regular;
+  font-size: 2rem;
+  color: $jet;
 }
 
 .score-game {
@@ -26,11 +35,24 @@
 }
 
 .block-audio-player {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
   grid-column: 1 / 8;
   grid-row: 2/ 3;
   background-color: darkmagenta;
 }
 
+.block-audio-player__image {
+  grid-row: 1 / 3;
+  background-color: darkred;
+}
+.block-audio-player__title {
+  background-color: darkcyan;
+}
+.block-audio-player__audio-player {
+  background-color: chartreuse;
+}
 .button-next-question {
   grid-column: span 7;
   background-color: crimson;

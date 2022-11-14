@@ -17,7 +17,8 @@ function createElementsForQuiz() {
   blockAudioPlayerElement.className = 'block-audio-player';
   buttonNextQuestionElement.className = 'button-next-question';
   buttonNextQuestionElement.innerHTML = 'Next Level';
-
+  createElementsForStepsQuestion();
+  createElementsForBlockAudioPlayer();
   main.append(
     stepsQuestionsElement,
     scoreGameElement,
@@ -25,6 +26,31 @@ function createElementsForQuiz() {
     blockAnswersElement,
     blockAudioPlayerElement,
     buttonNextQuestionElement
+  );
+}
+
+function createElementsForStepsQuestion() {
+  arrayNumberQuestionElement.forEach((numberElement) => {
+    let divElement = document.createElement('div');
+    divElement.className = 'steps-questions__element';
+    divElement.innerHTML = numberElement;
+    stepsQuestionsElement.append(divElement);
+  });
+}
+
+const imageBlockAudioPlayerElement = document.createElement('div');
+const titleBlockAudioPlayerElement = document.createElement('h3');
+const audioPlayerElement = document.createElement('div');
+
+function createElementsForBlockAudioPlayer() {
+  imageBlockAudioPlayerElement.className = 'block-audio-player__image';
+  titleBlockAudioPlayerElement.className = 'block-audio-player__title';
+  titleBlockAudioPlayerElement.innerHTML = '****';
+  audioPlayerElement.className = 'block-audio-player__audio-player';
+  blockAudioPlayerElement.append(
+    imageBlockAudioPlayerElement,
+    titleBlockAudioPlayerElement,
+    audioPlayerElement
   );
 }
 
