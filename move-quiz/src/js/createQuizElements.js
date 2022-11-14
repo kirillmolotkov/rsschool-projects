@@ -7,7 +7,6 @@ const blockAnswersElement = document.createElement('div');
 const blockAboutMoveElement = document.createElement('div');
 const blockAudioPlayerElement = document.createElement('div');
 const buttonNextQuestionElement = document.createElement('button');
-const arrayNumberQuestionElement = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function createElementsForQuiz() {
   stepsQuestionsElement.className = 'steps-questions';
@@ -19,6 +18,7 @@ function createElementsForQuiz() {
   buttonNextQuestionElement.innerHTML = 'Next Level';
   createElementsForStepsQuestion();
   createElementsForBlockAudioPlayer();
+  createElementsForBlockAnswers();
   main.append(
     stepsQuestionsElement,
     scoreGameElement,
@@ -28,6 +28,8 @@ function createElementsForQuiz() {
     buttonNextQuestionElement
   );
 }
+
+const arrayNumberQuestionElement = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function createElementsForStepsQuestion() {
   arrayNumberQuestionElement.forEach((numberElement) => {
@@ -52,6 +54,16 @@ function createElementsForBlockAudioPlayer() {
     titleBlockAudioPlayerElement,
     audioPlayerElement
   );
+}
+
+const arrayAnswersElements = [1, 2, 3, 4, 5, 6];
+function createElementsForBlockAnswers() {
+  arrayAnswersElements.forEach((answersElement) => {
+    let answer = document.createElement('button');
+    answer.className = 'block-answers__answer';
+    answer.innerHTML = 'answer';
+    blockAnswersElement.append(answer);
+  });
 }
 
 export { createElementsForQuiz };

@@ -29,11 +29,17 @@
 }
 
 .block-answers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   grid-column: 1 / 4;
   grid-row: 3 /4;
   background-color: brown;
 }
-
+.block-answers__answer {
+  height: 3rem;
+  background-color: hotpink;
+}
 .block-audio-player {
   display: grid;
   grid-template-columns: 1fr 3fr;
