@@ -7,7 +7,7 @@ header.className = 'header';
 container.append(header);
 
 const main = document.createElement('main');
-main.className = 'main';
+main.className = 'main main-about';
 container.append(main);
 
 const footer = document.createElement('footer');

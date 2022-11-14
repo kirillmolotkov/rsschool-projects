@@ -1,0 +1,37 @@
+.main-quiz {
+  display: grid;
+  grid-template-columns: repeat(7, [col] 1fr);
+  grid-template-rows: 10vh 20vh 32vh 7vh;
+  grid-gap: 15px;
+}
+
+.steps-questions {
+  grid-column: span 6;
+  background-color: aqua;
+}
+
+.score-game {
+  background-color: burlywood;
+}
+
+.block-about-move {
+  grid-column: 4 / 8;
+  background-color: chocolate;
+}
+
+.block-answers {
+  grid-column: 1 / 4;
+  grid-row: 3 /4;
+  background-color: brown;
+}
+
+.block-audio-player {
+  grid-column: 1 / 8;
+  grid-row: 2/ 3;
+  background-color: darkmagenta;
+}
+
+.button-next-question {
+  grid-column: span 7;
+  background-color: crimson;
+}
