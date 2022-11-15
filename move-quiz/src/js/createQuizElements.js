@@ -29,14 +29,24 @@ function createElementsForQuiz() {
   );
 }
 
-const arrayNumberQuestionElement = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const arrayNumberQuestionElement = [
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+  document.createElement('div'),
+];
 
 function createElementsForStepsQuestion() {
-  arrayNumberQuestionElement.forEach((numberElement) => {
-    let divElement = document.createElement('div');
-    divElement.className = 'steps-questions__element';
-    divElement.innerHTML = numberElement;
-    stepsQuestionsElement.append(divElement);
+  arrayNumberQuestionElement.forEach((numberElement, index) => {
+    numberElement.className = 'steps-questions__element';
+    numberElement.innerHTML = index + 1;
+    stepsQuestionsElement.append(numberElement);
   });
 }
 
@@ -56,13 +66,19 @@ function createElementsForBlockAudioPlayer() {
   );
 }
 
-const arrayAnswersElements = [1, 2, 3, 4, 5, 6];
+const arrayAnswersElements = [
+  document.createElement('button'),
+  document.createElement('button'),
+  document.createElement('button'),
+  document.createElement('button'),
+  document.createElement('button'),
+  document.createElement('button'),
+];
 function createElementsForBlockAnswers() {
-  arrayAnswersElements.forEach((answersElement) => {
-    let answer = document.createElement('button');
-    answer.className = 'block-answers__answer';
-    answer.innerHTML = 'answer';
-    blockAnswersElement.append(answer);
+  arrayAnswersElements.forEach((answerElement) => {
+    answerElement.className = 'block-answers__answer';
+    answerElement.innerHTML = 'answer';
+    blockAnswersElement.append(answerElement);
   });
 }
 
