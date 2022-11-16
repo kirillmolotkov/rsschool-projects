@@ -1,3 +1,4 @@
+import { createAudioPlayer } from './audioPlayer';
 import { main } from './createElements';
 
 //create elements for quiz page
@@ -19,6 +20,7 @@ function createElementsForQuiz() {
   createElementsForStepsQuestion();
   createElementsForBlockAudioPlayer();
   createElementsForBlockAnswers();
+  createAudioPlayer();
   main.append(
     stepsQuestionsElement,
     scoreGameElement,
@@ -82,4 +84,4 @@ function createElementsForBlockAnswers() {
   });
 }
 
-export { createElementsForQuiz };
+export { createElementsForQuiz, audioPlayerElement, blockAudioPlayerElement };

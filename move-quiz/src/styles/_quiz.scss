@@ -57,7 +57,44 @@
   background-color: darkcyan;
 }
 .block-audio-player__audio-player {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: chartreuse;
+}
+.button-play {
+  background-image: url(./assets/icon/play.webp);
+}
+.button-pause {
+  background-image: url(./assets/icon/pause.png);
+}
+.audio-player__button-play-pause {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  cursor: pointer;
+}
+.audio-player__button-mute {
+  width: 50px;
+  height: 50px;
+  background-image: url(./assets/icon/volume.png);
+  background-size: contain;
+  cursor: pointer;
+}
+.audio-player__range-time-play {
+  flex-basis: 50%;
+  cursor: pointer;
+}
+.audio-player__range-volume {
+  cursor: pointer;
+}
+.audio-player__time-play {
+  display: flex;
+  width: 70px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
 }
 .button-next-question {
   grid-column: span 7;
