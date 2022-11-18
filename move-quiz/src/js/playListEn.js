@@ -13,8 +13,8 @@ const playListEnglish = [
     title: "Ocean's Eleven",
     description:
       'Danny Ocean and his ten accomplices plan to rob three Las Vegas casinos simultaneously.',
-    image: "./image/Ocean's-Eleven.jpg",
-    src: "./audio/Ocean's-Eleven.mp3",
+    image: './image/Oceans-Eleven.jpg',
+    src: './audio/Oceans-Eleven.mp3',
     duration: '87',
   },
   {
@@ -220,8 +220,8 @@ const playListEnglish = [
     title: "Hachi: A Dog's Tale",
     description:
       'A college professor bonds with an abandoned dog he takes into his home.',
-    image: "./image/Hachi-A-Dog's-Tale.jpg",
-    src: "./audio/Hachi-A-Dog's-Tale.mp3",
+    image: './image/Hachi-A-Dogs-Tale.jpg',
+    src: './audio/Hachi-A-Dogs-Tale.mp3',
     duration: '73',
   },
   {
@@ -229,8 +229,8 @@ const playListEnglish = [
     title: "Harry Potter and the Sorcerer's Stone",
     description:
       'An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.',
-    image: "./image/Harry-Potter-and-the-Sorcerer's-Stone.jpg",
-    src: "./audio/Harry-Potter-and-the-Sorcerer's-Stone.mp3",
+    image: './image/Harry-Potter-and-the-Sorcerers-Stone.jpg',
+    src: './audio/Harry-Potter-and-the-Sorcerers-Stone.mp3',
     duration: '133',
   },
   {
@@ -391,7 +391,7 @@ const playListEnglish = [
     title: 'Pretty Woman',
     description:
       'A man in a legal but hurtful business needs an escort for some social events, and hires a beautiful prostitute he meets... only to fall in love.',
-    image: './image/Pretty Woman.jpg',
+    image: './image/Pretty-Woman.jpg',
     src: './audio/Pretty-Woman.mp3',
     duration: '181',
   },
@@ -508,7 +508,7 @@ const playListEnglish = [
     title: 'Tenet',
     description:
       'Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.',
-    image: './imag/Tenet.jpg',
+    image: './image/Tenet.jpg',
     src: './audio/Tenet.mp3',
     duration: '481',
   },
@@ -648,16 +648,16 @@ const playListEnglish = [
     duration: '155',
   },
   {
-    id: '71',
+    id: '72',
     title: 'Titanic',
     description:
       'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.',
     image: './image/Titanic.jpg',
-    src: './audio/Titanic.jpg',
+    src: './audio/Titanic.mp3',
     duration: '279',
   },
   {
-    id: '72',
+    id: '73',
     title: 'The Fast and the Furious: Tokyo Drift',
     description:
       'A teenager becomes a major competitor in the world of drift racing after moving in with his father in Tokyo to avoid a jail sentence in America.',
@@ -666,7 +666,7 @@ const playListEnglish = [
     duration: '256',
   },
   {
-    id: '73',
+    id: '74',
     title: 'Venom',
     description:
       'A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.',

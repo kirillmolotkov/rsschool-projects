@@ -1,5 +1,10 @@
 import { createAudioPlayer } from './audioPlayer';
 import { main } from './createElements';
+import {
+  currentNumberQuest,
+  isCorrectAnswers,
+  randomAnswersArray,
+} from './startGame';
 
 //create elements for quiz page
 const stepsQuestionsElement = document.createElement('div');
@@ -12,6 +17,7 @@ const buttonNextQuestionElement = document.createElement('button');
 function createElementsForQuiz() {
   stepsQuestionsElement.className = 'steps-questions';
   scoreGameElement.className = 'score-game';
+  scoreGameElement.textContent = '0';
   blockAnswersElement.className = 'block-answers';
   blockAboutMoveElement.className = 'block-about-move';
   blockAudioPlayerElement.className = 'block-audio-player';
@@ -20,7 +26,8 @@ function createElementsForQuiz() {
   createElementsForStepsQuestion();
   createElementsForBlockAudioPlayer();
   createElementsForBlockAnswers();
-  createAudioPlayer();
+  createAudioPlayer(audioPlayerElement);
+  addedStyleForCurrentQuest();
   main.append(
     stepsQuestionsElement,
     scoreGameElement,
@@ -32,10 +39,6 @@ function createElementsForQuiz() {
 }
 
 const arrayNumberQuestionElement = [
-  document.createElement('div'),
-  document.createElement('div'),
-  document.createElement('div'),
-  document.createElement('div'),
   document.createElement('div'),
   document.createElement('div'),
   document.createElement('div'),
@@ -76,12 +79,36 @@ const arrayAnswersElements = [
   document.createElement('button'),
   document.createElement('button'),
 ];
+
 function createElementsForBlockAnswers() {
-  arrayAnswersElements.forEach((answerElement) => {
+  arrayAnswersElements.forEach((answerElement, index) => {
     answerElement.className = 'block-answers__answer';
-    answerElement.innerHTML = 'answer';
+    answerElement.textContent = randomAnswersArray[0][index].title;
     blockAnswersElement.append(answerElement);
   });
 }
 
-export { createElementsForQuiz, audioPlayerElement, blockAudioPlayerElement };
+function addedStyleForCurrentQuest() {
+  arrayNumberQuestionElement.forEach((elem) => {
+    elem.classList.remove('current-question');
+  });
+  arrayNumberQuestionElement.forEach((elem) => {
+    if (Number(elem.textContent) === currentNumberQuest) {
+      elem.classList.add('current-question');
+    }
+  });
+}
+
+blockAnswersElement.addEventListener('click', isCorrectAnswers);
+
+export {
+  createElementsForQuiz,
+  audioPlayerElement,
+  blockAudioPlayerElement,
+  arrayAnswersElements,
+  arrayNumberQuestionElement,
+  blockAnswersElement,
+  blockAboutMoveElement,
+  titleBlockAudioPlayerElement,
+  imageBlockAudioPlayerElement,
+};
