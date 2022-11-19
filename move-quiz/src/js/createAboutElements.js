@@ -68,3 +68,5 @@ function deleteElements() {
     main.removeChild(main.lastChild);
   }
 }
+
+export { deleteElements };

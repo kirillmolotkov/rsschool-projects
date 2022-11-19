@@ -1,8 +1,9 @@
-import { createAudioPlayer } from './audioPlayer';
+import { createAudioPlayer, nextSteps } from './audioPlayer';
 import { main } from './createElements';
 import {
   currentNumberQuest,
   isCorrectAnswers,
+  isHaveCorrectAnswer,
   randomAnswersArray,
 } from './startGame';
 
@@ -83,7 +84,8 @@ const arrayAnswersElements = [
 function createElementsForBlockAnswers() {
   arrayAnswersElements.forEach((answerElement, index) => {
     answerElement.className = 'block-answers__answer';
-    answerElement.textContent = randomAnswersArray[0][index].title;
+    answerElement.textContent =
+      randomAnswersArray.answers[currentNumberQuest.number - 1][index].title;
     blockAnswersElement.append(answerElement);
   });
 }
@@ -93,14 +95,18 @@ function addedStyleForCurrentQuest() {
     elem.classList.remove('current-question');
   });
   arrayNumberQuestionElement.forEach((elem) => {
-    if (Number(elem.textContent) === currentNumberQuest) {
+    if (Number(elem.textContent) === currentNumberQuest.number) {
       elem.classList.add('current-question');
     }
   });
 }
 
 blockAnswersElement.addEventListener('click', isCorrectAnswers);
-
+buttonNextQuestionElement.addEventListener('click', () => {
+  if (isHaveCorrectAnswer.bool) {
+    nextSteps();
+  }
+});
 export {
   createElementsForQuiz,
   audioPlayerElement,
@@ -111,4 +117,5 @@ export {
   blockAboutMoveElement,
   titleBlockAudioPlayerElement,
   imageBlockAudioPlayerElement,
+  scoreGameElement,
 };

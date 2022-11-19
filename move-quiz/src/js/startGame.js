@@ -1,15 +1,16 @@
 //preparing the game for launch
-
-import { audioPlayerPlay, createAudioPlayer } from './audioPlayer';
+import { audio, audioPlayerPlay } from './audioPlayer';
+import { deleteElements } from './createAboutElements';
+import { main } from './createElements';
 import {
   arrayAnswersElements,
-  arrayNumberQuestionElement,
   blockAboutMoveElement,
-  blockAnswersElement,
   imageBlockAudioPlayerElement,
+  scoreGameElement,
   titleBlockAudioPlayerElement,
 } from './createQuizElements';
 import { playListEnglish } from './playListEn';
+import { winGame } from './winGame';
 
 function shuffle(array) {
   //use Fisher-Yates Shuffle algorithm
@@ -22,7 +23,15 @@ function shuffle(array) {
 }
 
 const copyPlayListEnglish = playListEnglish.slice(0);
-const shuffledCopyPlayListEnglish = shuffle(copyPlayListEnglish);
+let shuffledCopyPlayListEnglish = {
+  shuffle: shuffle(copyPlayListEnglish),
+  get shuffleValue() {
+    return this.shuffle;
+  },
+  set shuffleValue(value) {
+    this.shuffle = value;
+  },
+};
 
 function createRandomAnswers(shuffledList) {
   let counterIteration = 0;
@@ -43,8 +52,25 @@ function createRandomAnswers(shuffledList) {
   return stepArrayQuestions;
 }
 
-const randomAnswersArray = createRandomAnswers(shuffledCopyPlayListEnglish);
-const correctAnswersArray = createCorrectAnswers(randomAnswersArray);
+let randomAnswersArray = {
+  answers: createRandomAnswers(shuffledCopyPlayListEnglish.shuffle),
+  get randomAnswers() {
+    return this.answers;
+  },
+  set randomAnswers(value) {
+    this.answers = value;
+  },
+};
+console.log(randomAnswersArray.answers);
+let correctAnswersArray = {
+  correct: createCorrectAnswers(randomAnswersArray.answers),
+  get correctAnswers() {
+    return this.correct;
+  },
+  set correctAnswers(value) {
+    this.correct = value;
+  },
+};
 
 function createCorrectAnswers(arrayAnswers) {
   let correctAnswers = [];
@@ -56,8 +82,24 @@ function createCorrectAnswers(arrayAnswers) {
 }
 
 //start game
-let currentNumberQuest = 1;
-
+let currentNumberQuest = {
+  number: 1,
+  get numberValue() {
+    return this.number;
+  },
+  set numberValue(value) {
+    this.number = value;
+  },
+};
+let gameScore = {
+  score: 0,
+  get scoreValue() {
+    return this.score;
+  },
+  set scoreValue(value) {
+    this.score = value;
+  },
+};
 //create new audio player for block about movie
 
 const newButtonPlayAndPause = document.createElement('div');
@@ -98,7 +140,7 @@ const aboutImageElement = document.createElement('div');
 function addImageCheckedAnswer(selectedAnswers) {
   aboutImageElement.className = 'block-about-move__image';
   blockAboutMoveElement.append(aboutImageElement);
-  let arrayObjects = randomAnswersArray[currentNumberQuest - 1];
+  let arrayObjects = randomAnswersArray.answers[currentNumberQuest.number - 1];
   arrayObjects.forEach((obj) => {
     if (selectedAnswers.textContent === obj.title) {
       aboutImageElement.style.backgroundImage = `url(${obj.image})`;
@@ -111,7 +153,7 @@ const aboutTitleElement = document.createElement('h3');
 function addTitleCheckedAnswers(selectedAnswers) {
   aboutTitleElement.className = 'block-about-move__title';
   blockAboutMoveElement.append(aboutTitleElement);
-  let arrayObjects = randomAnswersArray[currentNumberQuest - 1];
+  let arrayObjects = randomAnswersArray.answers[currentNumberQuest.number - 1];
   arrayObjects.forEach((obj) => {
     if (selectedAnswers.textContent === obj.title) {
       aboutTitleElement.textContent = obj.title;
@@ -124,7 +166,7 @@ const aboutDescriptionElement = document.createElement('p');
 function addDescriptionCheckedAnswers(selectedAnswers) {
   aboutDescriptionElement.className = 'block-about-move__description';
   blockAboutMoveElement.append(aboutDescriptionElement);
-  let arrayObjects = randomAnswersArray[currentNumberQuest - 1];
+  let arrayObjects = randomAnswersArray.answers[currentNumberQuest.number - 1];
   arrayObjects.forEach((obj) => {
     if (selectedAnswers.textContent === obj.title) {
       aboutDescriptionElement.textContent = obj.description;
@@ -132,34 +174,64 @@ function addDescriptionCheckedAnswers(selectedAnswers) {
   });
 }
 
+let isHaveCorrectAnswer = {
+  bool: false,
+  get boolValue() {
+    return this.bool;
+  },
+  set boolValue(value) {
+    this.bool = value;
+  },
+};
+
 function isCorrectAnswers(event) {
   let targetDataElem;
   let target = event.target;
   if (target.tagName !== 'BUTTON') {
     return;
   } else {
-    randomAnswersArray[currentNumberQuest - 1].forEach((elem) => {
-      if (elem.title === target.textContent) {
-        targetDataElem = elem;
+    let result =
+      correctAnswersArray.correct[currentNumberQuest.number - 1].title ===
+      target.textContent;
+    randomAnswersArray.answers[currentNumberQuest.number - 1].forEach(
+      (elem) => {
+        if (elem.title === target.textContent) {
+          targetDataElem = elem;
+        }
       }
-    });
+    );
     if (
-      correctAnswersArray[currentNumberQuest - 1].title === target.textContent
+      correctAnswersArray.correct[currentNumberQuest.number - 1].title ===
+      target.textContent
     ) {
       titleBlockAudioPlayerElement.textContent =
-        correctAnswersArray[currentNumberQuest - 1].title;
+        correctAnswersArray.correct[currentNumberQuest.number - 1].title;
       imageBlockAudioPlayerElement.style.backgroundImage = `url(${
-        correctAnswersArray[currentNumberQuest - 1].src
+        correctAnswersArray.correct[currentNumberQuest.number - 1].src
       })`;
     }
+
     if (isAudioForAboutPlay) {
       audioPlayerForBlockAbout(targetDataElem.src, targetDataElem.duration);
     }
-    // console.log(
-    //   correctAnswersArray[currentNumberQuest - 1].title === target.textContent
-    // );
-    // isAudioForAboutPlay = true;
-    // audioPlayerForBlockAbout(targetDataElem.src, targetDataElem.duration);
+
+    if (!isHaveCorrectAnswer.bool) {
+      if (result !== true) {
+        target.setAttribute('value', 'false');
+        target.style.borderColor = 'red';
+      } else {
+        target.setAttribute('value', 'true');
+        target.style.borderColor = 'green';
+        isHaveCorrectAnswer.boolValue = true;
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }
+    if (currentNumberQuest.number === 6 && isCorrectAnswers) {
+      setScoreGame();
+      deleteElements();
+      winGame(gameScore.score);
+    }
     newButtonPlayAndPause.addEventListener('click', () => {
       aboutTimePlayInterval = 0;
       aboutCurrentTimePlay = 0;
@@ -191,7 +263,6 @@ let aboutAudio = new Audio();
 let aboutTimePlayInterval;
 let aboutCurrentTimePlay = 0;
 let aboutValueVolumeAudioPlayer = 1;
-aboutAudio.pause();
 
 async function audioPlayerForBlockAbout(currentSrc, targetAudio) {
   aboutAudio.src = currentSrc;
@@ -215,10 +286,43 @@ async function audioPlayerForBlockAbout(currentSrc, targetAudio) {
   }
 }
 
+let counterMistakes = {
+  counter: 5,
+  get counterValue() {
+    return this.counter;
+  },
+  set counterValue(value) {
+    this.counter = value;
+  },
+};
+function isMiniWin(win) {
+  if (win === true) {
+    arrayAnswersElements.forEach((answer) => {
+      if (answer.getAttribute('value') == 'false') {
+        counterMistakes.counterValue--;
+      }
+    });
+  }
+}
+function setScoreGame() {
+  gameScore.scoreValue += counterMistakes.counter;
+  scoreGameElement.textContent = `${gameScore.score}`;
+}
+
 export {
   createCorrectAnswers,
   randomAnswersArray,
   correctAnswersArray,
   currentNumberQuest,
   isCorrectAnswers,
+  isHaveCorrectAnswer,
+  deleteElementsInBlockAbout,
+  isMiniWin,
+  setScoreGame,
+  counterMistakes,
+  gameScore,
+  shuffledCopyPlayListEnglish,
+  createRandomAnswers,
+  copyPlayListEnglish,
+  shuffle,
 };

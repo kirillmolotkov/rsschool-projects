@@ -83,7 +83,7 @@
   background-color: hotpink;
   cursor: pointer;
   border-radius: 1rem;
-  border: 2px solid grey;
+  border: 3px solid black;
 }
 .block-audio-player {
   display: grid;
@@ -96,7 +96,6 @@
 
 .block-audio-player__image {
   grid-row: 1 / 3;
-  // background-color: darkred;
   background-size: contain;
   background-repeat: no-repeat;
 }

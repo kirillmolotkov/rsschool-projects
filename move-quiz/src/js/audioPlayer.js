@@ -1,9 +1,21 @@
+import { deleteElements } from './createAboutElements';
 import {
+  arrayAnswersElements,
   audioPlayerElement,
   blockAudioPlayerElement,
+  createElementsForQuiz,
+  scoreGameElement,
 } from './createQuizElements';
 import { playListEnglish } from './playListEn';
-import { correctAnswersArray, currentNumberQuest } from './startGame';
+import {
+  correctAnswersArray,
+  counterMistakes,
+  currentNumberQuest,
+  deleteElementsInBlockAbout,
+  isHaveCorrectAnswer,
+  isMiniWin,
+  setScoreGame,
+} from './startGame';
 
 //create audio player elements
 
@@ -36,7 +48,15 @@ function createAudioPlayer(placeOfCreation) {
   );
 }
 
-let isPlayAudio = false;
+let isPlayAudio = {
+  bool: false,
+  get playValue() {
+    return this.bool;
+  },
+  set playValue(value) {
+    this.bool = value;
+  },
+};
 const audio = new Audio();
 let timePlayInterval;
 let currentTimePlay = 0;
@@ -46,11 +66,15 @@ function audioPlayerPlay(srcCurrentPlayList) {
   audio.src = srcCurrentPlayList;
   audio.currentTime = currentTimePlay;
   audio.volume = valueVolumeAudioPlayer;
+  audio.pause();
 
-  if (!isPlayAudio) {
+  if (!isPlayAudio.bool) {
     audio.play();
-    isPlayAudio = true;
-    inputRangeTimePlay.setAttribute('max', correctAnswersArray[0].duration);
+    isPlayAudio.boolValue = true;
+    inputRangeTimePlay.setAttribute(
+      'max',
+      correctAnswersArray.correct[currentNumberQuest.number - 1].duration
+    );
     timePlayInterval = setInterval(() => {
       inputRangeTimePlay.setAttribute(
         'value',
@@ -63,7 +87,7 @@ function audioPlayerPlay(srcCurrentPlayList) {
     buttonPlayAndPause.classList.add('button-pause');
   } else {
     audio.pause();
-    isPlayAudio = false;
+    isPlayAudio.boolValue = false;
     clearInterval(timePlayInterval);
     timePlayInterval = null;
     buttonPlayAndPause.classList.remove('button-pause');
@@ -73,14 +97,18 @@ function audioPlayerPlay(srcCurrentPlayList) {
 
 function rewindAudio() {
   currentTimePlay = inputRangeTimePlay.value;
-  isPlayAudio = false;
-  audioPlayerPlay(correctAnswersArray[currentNumberQuest - 1].src);
+  isPlayAudio.boolValue = false;
+  audioPlayerPlay(
+    correctAnswersArray.correct[currentNumberQuest.number - 1].src
+  );
 }
 
 function changeVolumeAudio() {
   valueVolumeAudioPlayer = inputRangeVolume.value / 100;
-  isPlayAudio = false;
-  audioPlayerPlay(correctAnswersArray[currentNumberQuest - 1].src);
+  isPlayAudio.boolValue = false;
+  audioPlayerPlay(
+    correctAnswersArray.correct[currentNumberQuest.number - 1].src
+  );
 }
 
 function writeTimePlayInElement() {
@@ -94,8 +122,44 @@ function writeTimePlayInElement() {
 }
 
 buttonPlayAndPause.addEventListener('click', () => {
-  audioPlayerPlay(correctAnswersArray[currentNumberQuest - 1].src);
+  audioPlayerPlay(
+    correctAnswersArray.correct[currentNumberQuest.number - 1].src
+  );
 });
 inputRangeTimePlay.addEventListener('click', rewindAudio);
 inputRangeVolume.addEventListener('click', changeVolumeAudio);
-export { createAudioPlayer, audioPlayerPlay };
+
+function nextSteps() {
+  audio.pause();
+  audio.currentTime = 0;
+  inputRangeTimePlay.setAttribute('min', `0`);
+  inputRangeTimePlay.setAttribute(
+    'max',
+    correctAnswersArray.correct[currentNumberQuest.number - 1].duration
+  );
+  inputRangeTimePlay.setAttribute('value', `0`);
+  isPlayAudio.boolValue = false;
+  isMiniWin(isHaveCorrectAnswer.bool);
+  currentNumberQuest.numberValue++;
+  isHaveCorrectAnswer.boolValue = false;
+
+  arrayAnswersElements.forEach((elem) => {
+    elem.style.borderColor = '';
+    elem.setAttribute('value', '');
+  });
+
+  deleteElementsInBlockAbout();
+  deleteElements();
+  createElementsForQuiz();
+  setScoreGame();
+  counterMistakes.counterValue = 5;
+}
+
+export {
+  createAudioPlayer,
+  audioPlayerPlay,
+  currentTimePlay,
+  nextSteps,
+  audio,
+  isPlayAudio,
+};
