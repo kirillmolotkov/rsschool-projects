@@ -235,6 +235,7 @@ function isCorrectAnswers(event) {
     }
 
     if (currentNumberQuest.number === 6 && isHaveCorrectAnswer.bool === true) {
+      isMiniWin(isHaveCorrectAnswer.bool);
       setScoreGame();
       deleteElements();
       winGame(gameScore.score);
