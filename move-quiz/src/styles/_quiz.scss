@@ -174,4 +174,9 @@
 .button-next-question {
   grid-column: span 7;
   background-color: crimson;
+  opacity: 0.5;
+}
+.active-next {
+  opacity: 1;
+  cursor: pointer;
 }

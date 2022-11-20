@@ -4,6 +4,7 @@ import { deleteElements } from './createAboutElements';
 import {
   arrayAnswersElements,
   blockAboutMoveElement,
+  buttonNextQuestionElement,
   imageBlockAudioPlayerElement,
   scoreGameElement,
   titleBlockAudioPlayerElement,
@@ -227,6 +228,7 @@ function isCorrectAnswers(event) {
         imageBlockAudioPlayerElement.style.backgroundImage = `url(${
           correctAnswersArray.correct[currentNumberQuest.number - 1].image
         })`;
+        buttonNextQuestionElement.classList.add('active-next');
       }
     }
     console.log(currentNumberQuest.number);

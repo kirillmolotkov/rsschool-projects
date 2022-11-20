@@ -118,4 +118,5 @@ export {
   titleBlockAudioPlayerElement,
   imageBlockAudioPlayerElement,
   scoreGameElement,
+  buttonNextQuestionElement,
 };
