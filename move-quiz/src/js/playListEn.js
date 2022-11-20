@@ -158,7 +158,7 @@ const playListEnglish = [
     description:
       "Philip J. Fry, a pizza delivery boy, is accidentally frozen in 1999 and thawed out on New Year's Eve 2999.",
     image: './image/Futurama.jpg',
-    src: './sound/Futurama.mp3',
+    src: './audio/Futurama.mp3',
     duration: '28',
   },
   {
@@ -589,8 +589,8 @@ const playListEnglish = [
     title: "The Queen's Gambit",
     description:
       'Orphaned at the tender age of nine, prodigious introvert Beth Harmon discovers and masters the game of chess in 1960s USA. But child stardom comes at a price.',
-    image: "./image/The-Queen's-Gambit.jpg",
-    src: "./audio/The-Queen's-Gambit.mp3",
+    image: './image/The-Queens-Gambit.jpg',
+    src: './audio/The-Queens-Gambit.mp3',
     duration: '110',
   },
   {
