@@ -2,6 +2,7 @@ import { main, nav } from './createElements.js';
 import { createElementsForQuiz } from './createQuizElements.js';
 import { createElementsForGallery } from './createGalleryElements.js';
 import { createElementsForStatistic } from './createStatisticElements.js';
+import { audio, isPlayAudio } from './audioPlayer.js';
 
 // create elements for about page
 const titleMain = document.createElement('h1');
@@ -37,6 +38,8 @@ createElementsForAbout();
 //change elements in main
 
 function changeElementsInMain(targetElement) {
+  audio.pause();
+  isPlayAudio.playValue = false;
   deleteElements();
   if (targetElement.textContent === 'About') createElementsForAbout();
   if (targetElement.textContent === 'Quiz') createElementsForQuiz();
