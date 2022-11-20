@@ -156,7 +156,7 @@ function nextSteps() {
   setScoreGame();
   counterMistakes.counterValue = 5;
   imageBlockAudioPlayerElement.style.backgroundImage =
-    'url(./assets/movie.jpg)';
+    'url(./assets/movie.png)';
 }
 
 export {

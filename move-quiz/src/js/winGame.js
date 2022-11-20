@@ -60,7 +60,7 @@ function startNewGame() {
   });
   createElementsForQuiz();
   imageBlockAudioPlayerElement.style.backgroundImage =
-    'url(./assets/movie.jpg)';
+    'url(./assets/movie.png)';
 }
 
 buttonNewGame.addEventListener('click', startNewGame);

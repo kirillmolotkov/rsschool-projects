@@ -16,4 +16,58 @@
     padding: 10px;
     font-size: 1.2rem;
   }
+  .header {
+    height: 6vh;
+  }
+  .footer {
+    height: 6vh;
+  }
+  .main {
+    height: 82vh;
+  }
+  .main-quiz {
+    grid-column-gap: 5px;
+    grid-row-gap: 30px;
+  }
+
+  .steps-questions {
+    height: 70px;
+  }
+  .steps-questions__element {
+    font-size: 1rem;
+  }
+  .score-game {
+    font-size: 1rem;
+    height: 70px;
+  }
+  .block-audio-player__title {
+    font-size: 1.5rem;
+  }
+  .block-about-move__title {
+    text-align: center;
+  }
+  .block-about-move__description {
+    padding-left: 5px;
+    grid-column: 4/7;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+  .block-about-move__image {
+    grid-column: 1 / 4;
+  }
+  .audio-player__range-time-play {
+    flex-basis: 35%;
+  }
+  .new-audio-player__range-time-play {
+    flex-basis: 35%;
+  }
+  .audio-player__range-volume {
+    width: 100px;
+  }
+  .new-audio-player__range-volume {
+    width: 85px;
+  }
+  .block-answers {
+    gap: 5px;
+  }
 }
