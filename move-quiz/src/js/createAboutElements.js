@@ -22,15 +22,18 @@ function createElementsForAbout() {
   main.append(descriptionMain);
 
   descriptionPageQuiz.className = 'description-page-quiz';
-  descriptionPageQuiz.innerHTML = 'Text about tab Quiz';
+  descriptionPageQuiz.innerHTML =
+    'Tab Quiz - a game in which you have to guess the movie from the music';
   main.append(descriptionPageQuiz);
 
   descriptionPageGallery.className = 'description-page-gallery';
-  descriptionPageGallery.innerHTML = 'Text about tab Gallery';
+  descriptionPageGallery.innerHTML =
+    'Tab Gallery - here are all the films participating in the quiz';
   main.append(descriptionPageGallery);
 
   descriptionPageStatistic.className = 'description-page-statistic';
-  descriptionPageStatistic.innerHTML = 'Text about tab Statistic';
+  descriptionPageStatistic.innerHTML =
+    'Tab Statistic - here is your game stats';
   main.append(descriptionPageStatistic);
   addVideoForBackground();
 }

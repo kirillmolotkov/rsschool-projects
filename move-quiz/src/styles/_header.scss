@@ -25,12 +25,17 @@
   gap: 65px;
 }
 .nav-list-item {
+  padding: 5px;
+  border-radius: 1rem;
   @include roboto-regular;
   color: $persian-orange;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s;
 }
-
+.nav-list-item:hover {
+  color: $lemon-chiffon;
+}
 .settings {
   display: flex;
   gap: 10px;
@@ -39,11 +44,14 @@
   color: $persian-orange;
   font-size: 1.3rem;
 }
-.settings-lang,
-.settings-theme {
-  cursor: pointer;
-}
 
+.settings-lang {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.settings-lang:hover {
+  color: $lemon-chiffon;
+}
 .active-tab {
   background-color: $jet;
 }
