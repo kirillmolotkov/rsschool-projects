@@ -229,7 +229,8 @@ function isCorrectAnswers(event) {
         })`;
       }
     }
-    if (currentNumberQuest.number === 6 && isCorrectAnswers) {
+    console.log(currentNumberQuest.number);
+    if (currentNumberQuest.number === 6 && isHaveCorrectAnswer.bool === true) {
       setScoreGame();
       deleteElements();
       winGame(gameScore.score);
