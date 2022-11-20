@@ -1,5 +1,3 @@
-import { main } from './createElements';
-
 const videoElement = document.createElement('video');
 function addVideoForBackground() {
   videoElement.className = 'background-video';

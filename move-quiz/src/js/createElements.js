@@ -58,11 +58,6 @@ settingsLang.className = 'settings-lang';
 settingsLang.innerHTML = 'en';
 settings.append(settingsLang);
 
-const settingsTheme = document.createElement('div');
-settingsTheme.className = 'settings-theme';
-settingsTheme.innerHTML = 'dark';
-settings.append(settingsTheme);
-
 //elements for footer
 
 const gitHubLink = document.createElement('a');
