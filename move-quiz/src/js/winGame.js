@@ -4,6 +4,7 @@ import { main } from './createElements';
 import {
   arrayAnswersElements,
   createElementsForQuiz,
+  imageBlockAudioPlayerElement,
 } from './createQuizElements';
 import {
   copyPlayListEnglish,
@@ -58,7 +59,8 @@ function startNewGame() {
     elem.removeAttribute('value');
   });
   createElementsForQuiz();
-  console.log(randomAnswersArray.answers);
+  imageBlockAudioPlayerElement.style.backgroundImage =
+    'url(./assets/movie.jpg)';
 }
 
 buttonNewGame.addEventListener('click', startNewGame);
