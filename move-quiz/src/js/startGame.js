@@ -61,7 +61,7 @@ let randomAnswersArray = {
     this.answers = value;
   },
 };
-console.log(randomAnswersArray.answers);
+
 let correctAnswersArray = {
   correct: createCorrectAnswers(randomAnswersArray.answers),
   get correctAnswers() {
@@ -219,6 +219,7 @@ function isCorrectAnswers(event) {
       if (result !== true) {
         target.setAttribute('value', 'false');
         target.style.borderColor = 'red';
+        playAudionIncorrectAnswer();
       } else {
         target.setAttribute('value', 'true');
         target.style.borderColor = 'green';
@@ -229,9 +230,10 @@ function isCorrectAnswers(event) {
           correctAnswersArray.correct[currentNumberQuest.number - 1].image
         })`;
         buttonNextQuestionElement.classList.add('active-next');
+        playAudioCorrectAnswer();
       }
     }
-    console.log(currentNumberQuest.number);
+
     if (currentNumberQuest.number === 6 && isHaveCorrectAnswer.bool === true) {
       setScoreGame();
       deleteElements();
@@ -314,6 +316,17 @@ function setScoreGame() {
   scoreGameElement.textContent = `${gameScore.score}`;
 }
 
+function playAudioCorrectAnswer() {
+  const correctAudio = new Audio();
+  correctAudio.src = './audio/correct-answer.mp3';
+  correctAudio.play();
+}
+
+function playAudionIncorrectAnswer() {
+  const incorrectAudio = new Audio();
+  incorrectAudio.src = './audio/incorrect-answer.mp3';
+  incorrectAudio.play();
+}
 export {
   createCorrectAnswers,
   randomAnswersArray,
