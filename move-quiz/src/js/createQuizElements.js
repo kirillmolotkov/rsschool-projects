@@ -14,6 +14,7 @@ const blockAnswersElement = document.createElement('div');
 const blockAboutMoveElement = document.createElement('div');
 const blockAudioPlayerElement = document.createElement('div');
 const buttonNextQuestionElement = document.createElement('button');
+const prevueTextBlockAbout = document.createElement('h3');
 
 function createElementsForQuiz() {
   stepsQuestionsElement.className = 'steps-questions';
@@ -21,7 +22,8 @@ function createElementsForQuiz() {
   scoreGameElement.textContent = '0';
   blockAnswersElement.className = 'block-answers';
   blockAboutMoveElement.className = 'block-about-move';
-  blockAboutMoveElement.textContent = 'pay sound and check movie';
+  prevueTextBlockAbout.className = 'prevue-title';
+  prevueTextBlockAbout.textContent = 'Play sound and check movie ;)';
   blockAudioPlayerElement.className = 'block-audio-player';
   buttonNextQuestionElement.className = 'button-next-question';
   buttonNextQuestionElement.innerHTML = 'Next Level';
@@ -38,6 +40,7 @@ function createElementsForQuiz() {
     blockAudioPlayerElement,
     buttonNextQuestionElement
   );
+  blockAboutMoveElement.append(prevueTextBlockAbout);
 }
 
 const arrayNumberQuestionElement = [
