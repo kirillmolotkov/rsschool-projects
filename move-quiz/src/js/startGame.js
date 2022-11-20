@@ -1,7 +1,6 @@
 //preparing the game for launch
-import { audio, audioPlayerPlay } from './audioPlayer';
+import { audio } from './audioPlayer';
 import { deleteElements } from './createAboutElements';
-import { main } from './createElements';
 import {
   arrayAnswersElements,
   blockAboutMoveElement,

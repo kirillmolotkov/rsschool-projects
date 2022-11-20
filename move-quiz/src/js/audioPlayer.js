@@ -67,11 +67,11 @@ function audioPlayerPlay(srcCurrentPlayList) {
   audio.src = srcCurrentPlayList;
   audio.currentTime = currentTimePlay;
   audio.volume = valueVolumeAudioPlayer;
-  audio.pause();
 
-  if (!isPlayAudio.bool) {
+  if (!isPlayAudio.boolValue) {
     audio.play();
     isPlayAudio.boolValue = true;
+    console.log(isPlayAudio);
     inputRangeTimePlay.setAttribute(
       'max',
       correctAnswersArray.correct[currentNumberQuest.number - 1].duration
@@ -126,6 +126,7 @@ buttonPlayAndPause.addEventListener('click', () => {
   audioPlayerPlay(
     correctAnswersArray.correct[currentNumberQuest.number - 1].src
   );
+  console.log(isPlayAudio.bool);
 });
 inputRangeTimePlay.addEventListener('click', rewindAudio);
 inputRangeVolume.addEventListener('click', changeVolumeAudio);
@@ -160,7 +161,7 @@ function nextSteps() {
 
 export {
   createAudioPlayer,
-  audioPlayerPlay,
+  // audioPlayerPlay,
   currentTimePlay,
   nextSteps,
   audio,
