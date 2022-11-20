@@ -3,6 +3,7 @@ import { createElementsForQuiz } from './createQuizElements.js';
 import { createElementsForGallery } from './createGalleryElements.js';
 import { createElementsForStatistic } from './createStatisticElements.js';
 import { audio, isPlayAudio } from './audioPlayer.js';
+import { addVideoForBackground, videoElement } from './backgroundVideo.js';
 
 // create elements for about page
 const titleMain = document.createElement('h1');
@@ -31,6 +32,7 @@ function createElementsForAbout() {
   descriptionPageStatistic.className = 'description-page-statistic';
   descriptionPageStatistic.innerHTML = 'Text about tab Statistic';
   main.append(descriptionPageStatistic);
+  addVideoForBackground();
 }
 
 createElementsForAbout();

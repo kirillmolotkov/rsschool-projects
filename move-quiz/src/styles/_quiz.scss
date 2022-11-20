@@ -1,4 +1,6 @@
 .main-quiz {
+  position: relative;
+  z-index: 10;
   display: grid;
   grid-template-columns: repeat(7, [col] 1fr);
   grid-template-rows: 10vh 20vh 32vh 7vh;
@@ -179,4 +181,16 @@
 .active-next {
   opacity: 1;
   cursor: pointer;
+}
+
+.main-about {
+  position: relative;
+  z-index: 10;
+}
+.background-video {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }

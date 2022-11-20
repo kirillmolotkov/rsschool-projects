@@ -40,6 +40,10 @@ module.exports = {
           from: path.resolve(__dirname, 'src/assets/audio'),
           to: path.resolve(__dirname, 'dist/audio'),
         },
+        {
+          from: path.resolve(__dirname, 'src/assets/video'),
+          to: path.resolve(__dirname, 'dist/video'),
+        },
       ],
     }),
   ],

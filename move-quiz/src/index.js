@@ -6,3 +6,5 @@ import './js/createAboutElements';
 import './js/createQuizElements';
 import './js/audioPlayer';
 import './js/startGame';
+import './js/winGame';
+import './js/backgroundVideo';
