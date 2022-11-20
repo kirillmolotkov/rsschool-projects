@@ -21,6 +21,7 @@ function createElementsForQuiz() {
   scoreGameElement.textContent = '0';
   blockAnswersElement.className = 'block-answers';
   blockAboutMoveElement.className = 'block-about-move';
+  blockAboutMoveElement.textContent = 'pay sound and check movie';
   blockAudioPlayerElement.className = 'block-audio-player';
   buttonNextQuestionElement.className = 'button-next-question';
   buttonNextQuestionElement.innerHTML = 'Next Level';
