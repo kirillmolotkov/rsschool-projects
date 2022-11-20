@@ -29,4 +29,34 @@
     padding: 7px;
     font-size: 1rem;
   }
+  .main-quiz {
+    grid-row-gap: 5px;
+    grid-template-rows: 6vh 20vh 17vh 34vh 6vh;
+  }
+  .steps-questions {
+    height: 50px;
+  }
+  .score-game {
+    height: 50px;
+  }
+  .block-answers {
+    margin: 0 auto;
+    grid-column: 1/ 8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .block-about-move {
+    grid-column: 1 / 8;
+  }
+  .block-about-move__image {
+    margin-left: 20px;
+  }
+  .new-audio-player__button-play-pause {
+    margin-left: 20px;
+  }
+  .block-audio-player__image {
+    width: 140px;
+    height: 180px;
+  }
 }
