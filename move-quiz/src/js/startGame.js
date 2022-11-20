@@ -225,6 +225,9 @@ function isCorrectAnswers(event) {
         isHaveCorrectAnswer.boolValue = true;
         audio.pause();
         audio.currentTime = 0;
+        imageBlockAudioPlayerElement.style.backgroundImage = `url(${
+          correctAnswersArray.correct[currentNumberQuest.number - 1].image
+        })`;
       }
     }
     if (currentNumberQuest.number === 6 && isCorrectAnswers) {

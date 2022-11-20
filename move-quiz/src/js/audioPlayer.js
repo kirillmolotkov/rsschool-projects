@@ -4,6 +4,7 @@ import {
   audioPlayerElement,
   blockAudioPlayerElement,
   createElementsForQuiz,
+  imageBlockAudioPlayerElement,
   scoreGameElement,
 } from './createQuizElements';
 import { playListEnglish } from './playListEn';
@@ -153,6 +154,8 @@ function nextSteps() {
   createElementsForQuiz();
   setScoreGame();
   counterMistakes.counterValue = 5;
+  imageBlockAudioPlayerElement.style.backgroundImage =
+    'url(./assets/movie.jpg)';
 }
 
 export {
