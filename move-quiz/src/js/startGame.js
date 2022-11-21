@@ -265,9 +265,13 @@ function isCorrectAnswers(event) {
       if (!isAudioForAboutPlay) {
         audioPlayerForBlockAbout(targetDataElem.src, targetDataElem.duration);
         isAudioForAboutPlay = true;
+        newButtonPlayAndPause.classList.remove('button-play');
+        newButtonPlayAndPause.classList.add('button-pause');
       } else if (isAudioForAboutPlay) {
         audioPlayerForBlockAbout(targetDataElem.src, targetDataElem.duration);
         isAudioForAboutPlay = false;
+        newButtonPlayAndPause.classList.add('button-play');
+        newButtonPlayAndPause.classList.remove('button-pause');
       }
     });
 
