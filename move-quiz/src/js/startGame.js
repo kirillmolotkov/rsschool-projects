@@ -184,6 +184,21 @@ let isHaveCorrectAnswer = {
   },
 };
 
+let arrayScoreGame = [];
+function getLocalStorageScore() {
+  let data = localStorage.getItem('score');
+  if (data === null) {
+    return;
+  } else {
+    let arrayData = data.split(',');
+    arrayData.forEach((elem) => {
+      arrayScoreGame.push(elem);
+    });
+  }
+}
+
+getLocalStorageScore();
+
 function isCorrectAnswers(event) {
   let targetDataElem;
   let target = event.target;
@@ -239,6 +254,8 @@ function isCorrectAnswers(event) {
       setScoreGame();
       deleteElements();
       winGame(gameScore.score);
+      arrayScoreGame.push(gameScore.score);
+      localStorage.setItem('score', arrayScoreGame);
     }
     newButtonPlayAndPause.addEventListener('click', () => {
       aboutTimePlayInterval = 0;
@@ -344,4 +361,5 @@ export {
   createRandomAnswers,
   copyPlayListEnglish,
   shuffle,
+  arrayScoreGame,
 };

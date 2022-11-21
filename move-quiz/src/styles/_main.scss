@@ -78,3 +78,17 @@
 .button-new-game:hover {
   color: $lemon-chiffon;
 }
+
+//main statistic
+.main-statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.statistic-item {
+  padding-left: 20px;
+  @include roboto-medium;
+  font-size: 1.5rem;
+  color: $persian-orange;
+}
