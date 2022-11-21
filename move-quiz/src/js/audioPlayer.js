@@ -164,4 +164,5 @@ export {
   nextSteps,
   audio,
   isPlayAudio,
+  buttonPlayAndPause,
 };

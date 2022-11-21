@@ -1,5 +1,5 @@
 //preparing the game for launch
-import { audio } from './audioPlayer';
+import { audio, buttonPlayAndPause } from './audioPlayer';
 import { deleteElements } from './createAboutElements';
 import {
   arrayAnswersElements,
@@ -246,6 +246,8 @@ function isCorrectAnswers(event) {
         })`;
         buttonNextQuestionElement.classList.add('active-next');
         playAudioCorrectAnswer();
+        buttonPlayAndPause.classList.remove('button-pause');
+        buttonPlayAndPause.classList.add('button-play');
       }
     }
 
