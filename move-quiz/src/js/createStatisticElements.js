@@ -20,5 +20,4 @@ function createElementsForStatistic() {
     });
   }
 }
-console.log(arrayScoreGame);
 export { createElementsForStatistic };

@@ -92,3 +92,33 @@
   font-size: 1.5rem;
   color: $persian-orange;
 }
+//main gallery
+
+.main-gallery {
+  overflow-y: scroll;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery-item {
+  width: 170px;
+  height: 210px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $persian-orange;
+  border-radius: 2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $lemon-chiffon;
+}
