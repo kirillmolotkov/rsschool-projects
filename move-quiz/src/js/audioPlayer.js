@@ -9,6 +9,7 @@ import {
 } from './createQuizElements';
 import { playListEnglish } from './playListEn';
 import {
+  aboutAudio,
   correctAnswersArray,
   counterMistakes,
   currentNumberQuest,
@@ -130,6 +131,7 @@ inputRangeTimePlay.addEventListener('click', rewindAudio);
 inputRangeVolume.addEventListener('click', changeVolumeAudio);
 
 function nextSteps() {
+  aboutAudio.pause();
   audio.pause();
   audio.currentTime = 0;
   inputRangeTimePlay.setAttribute('min', `0`);

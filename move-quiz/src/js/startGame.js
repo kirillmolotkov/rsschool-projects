@@ -368,4 +368,5 @@ export {
   copyPlayListEnglish,
   shuffle,
   arrayScoreGame,
+  aboutAudio,
 };
