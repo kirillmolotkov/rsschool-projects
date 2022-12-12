@@ -4,7 +4,14 @@ import { NewsClass } from './news/news';
 import { SourcesClass } from './sources/sources';
 import { ResponseObject } from '../../types/index';
 
-export class AppView {
+export interface AppViewClass {
+    news: NewsClass;
+    sources: SourcesClass;
+    drawNews(data: ResponseObject): ResponseObject
+    drawSources(data: ResponseObject): ResponseObject
+}
+
+export class AppView implements AppViewClass{
     news: NewsClass;
     sources: SourcesClass
     constructor() {
@@ -12,14 +19,16 @@ export class AppView {
         this.sources = new Sources();
     }
 
-    drawNews(data: ResponseObject) {
+    drawNews(data: ResponseObject):ResponseObject {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
+        return data
     }
 
-    drawSources(data:ResponseObject) {
+    drawSources(data:ResponseObject):ResponseObject {
         const values= data?.sources ? data?.sources : [];
         this.sources.draw(values);
+        return data
     }
 }
 

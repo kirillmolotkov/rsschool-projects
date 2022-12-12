@@ -1,6 +1,6 @@
 import AppLoader from './appLoader';
-import { paramGetResp } from './loader';
-interface AppControllerClass {
+import { ResponseObject } from '../../types/index';
+export interface AppControllerClass {
     getSources(callback:()=>void):void
     getNews(e: Event, callback:()=> void):void;
 }
@@ -15,7 +15,7 @@ class AppController extends AppLoader implements AppControllerClass{
         );
     }
 
-    getNews(e: Event, callback:()=>void):void {
+    getNews(e: Event, callback:(data?:ResponseObject )=>void):void {
         let target= e.target as Element
         const newsContainer = e.currentTarget 
         
