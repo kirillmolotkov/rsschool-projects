@@ -2,9 +2,9 @@ import { ResponseObject } from "../../types/index";
 type paramMakeUrl = {
     [key:string]: object
 }
-type paramGetResp = {
+export type paramGetResp = {
     endpoint: string
-    options: object
+    options?: object
 }
 interface LoaderClass {
     baseLink: string;
