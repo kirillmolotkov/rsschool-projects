@@ -4,12 +4,12 @@ import { AppControllerClass } from '../controller/controller';
 import { AppViewClass } from '../view/appView';
 import { ResponseObject } from '../../types/index';
 interface AppClass {
-    controller: AppControllerClass
+    controller: AppControllerClass;
     view: AppViewClass;
-    start():void
+    start(): void;
 }
 
-class App implements AppClass{
+class App implements AppClass {
     controller: AppControllerClass;
     view: AppViewClass;
     constructor() {
@@ -18,17 +18,19 @@ class App implements AppClass{
     }
 
     start() {
-        const startDocument = document.querySelector('.sources') as HTMLElement
+        const startDocument = document.querySelector('.sources') as HTMLElement;
 
-        if(startDocument) startDocument.addEventListener('click', (e: Event) => this.controller.getNews(e, (data?:ResponseObject) => {
-           if(data !== undefined){
-            return this.view.drawNews(data)
-           }
-           
-        })) ;
-        this.controller.getSources((data?:ResponseObject) => {
-            if(data !== undefined){
-                return this.view.drawSources(data)
+        if (startDocument)
+            startDocument.addEventListener('click', (e: Event) =>
+                this.controller.getNews(e, (data?: ResponseObject) => {
+                    if (data !== undefined) {
+                        return this.view.drawNews(data);
+                    }
+                })
+            );
+        this.controller.getSources((data?: ResponseObject) => {
+            if (data !== undefined) {
+                return this.view.drawSources(data);
             }
         });
     }
