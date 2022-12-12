@@ -1,5 +1,9 @@
 import './news.css';
 import { ResponseObject } from '../../../types/index';
+export interface NewsClass {
+    draw(data:ResponseObject['sources']):void
+}
+
 class News {
     draw(data:ResponseObject['sources']) {
         const news = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;

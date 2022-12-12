@@ -1,5 +1,8 @@
 import './sources.css';
 import { ResponseObject } from '../../../types/index';
+export interface SourcesClass {
+    draw(data: ResponseObject['sources']): void
+}
 
 class Sources {
     draw(data:ResponseObject['sources']) {
