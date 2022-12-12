@@ -7,12 +7,21 @@ export interface RequsetParameters {
 
 export interface ResponseObject {
   status: string;
-  sources: Array<object>;
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  category: string;
-  language: string;
-  country: string;
+  sources: Array<{
+    id: string,
+    name: string,
+    description: string,
+    url: string,
+    category: string,
+    language: string,
+    country: string,
+    title: string,
+    urlToImage: string,
+    author: string,
+    publishedAt: string,
+    source: {
+      name: string,
+      id: string
+    }
+  }>;
 }
