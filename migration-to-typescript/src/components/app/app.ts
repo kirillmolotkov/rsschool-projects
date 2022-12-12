@@ -2,6 +2,7 @@ import AppController from '../controller/controller';
 import { AppView } from '../view/appView';
 import { AppControllerClass } from '../controller/controller';
 import { AppViewClass } from '../view/appView';
+import { ResponseObject } from '../../types/index';
 interface AppClass {
     controller: AppControllerClass
     view: AppViewClass;
@@ -19,8 +20,17 @@ class App implements AppClass{
     start() {
         const startDocument = document.querySelector('.sources') as HTMLElement
 
-        if(startDocument) startDocument.addEventListener('click', (e: Event) => this.controller.getNews(e, (data) => this.view.drawNews(data))) ;
-        this.controller.getSources((data) => this.view.drawSources(data));
+        if(startDocument) startDocument.addEventListener('click', (e: Event) => this.controller.getNews(e, (data?:ResponseObject) => {
+           if(data !== undefined){
+            return this.view.drawNews(data)
+           }
+           
+        })) ;
+        this.controller.getSources((data?:ResponseObject) => {
+            if(data !== undefined){
+                return this.view.drawSources(data)
+            }
+        });
     }
 }
 

@@ -7,8 +7,8 @@ import { ResponseObject } from '../../types/index';
 export interface AppViewClass {
     news: NewsClass;
     sources: SourcesClass;
-    drawNews(data: ResponseObject): ResponseObject
-    drawSources(data: ResponseObject): ResponseObject
+    drawNews(data: ResponseObject): ResponseObject 
+    drawSources(data: ResponseObject): ResponseObject 
 }
 
 export class AppView implements AppViewClass{
@@ -19,7 +19,7 @@ export class AppView implements AppViewClass{
         this.sources = new Sources();
     }
 
-    drawNews(data: ResponseObject):ResponseObject {
+    drawNews(data: ResponseObject):ResponseObject  {
         const values = data?.articles ? data?.articles : [];
         this.news.draw(values);
         return data

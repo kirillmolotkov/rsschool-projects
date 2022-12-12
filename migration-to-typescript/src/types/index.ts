@@ -19,7 +19,6 @@ export interface ResponseObject {
   status: number;
   ok:string;
   statusText: string;
-
   sources: Array<{
     id: string,
     name: string,
