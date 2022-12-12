@@ -16,7 +16,10 @@ export interface RequsetParameters {
 }
 
 export interface ResponseObject {
-  status: string;
+  status: number;
+  ok:string;
+  statusText: string;
+
   sources: Array<{
     id: string,
     name: string,
@@ -51,4 +54,5 @@ export interface ResponseObject {
       id: string
     }
   }>;
+  json:() => Response
 }
